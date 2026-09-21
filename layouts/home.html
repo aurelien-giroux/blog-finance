@@ -1,0 +1,27 @@
+{{ define "main" }}
+    {{- with .Content }}
+        <section class="homepage-intro">
+            <div class="article-content">
+                {{ . }}
+            </div>
+        </section>
+    {{- end }}
+
+    {{- $paginator := partial "helper/paginator.html" . -}}
+
+    {{- with $paginator.Pages }}
+        <h2 class="section-title">Derniers articles</h2>
+        <section class="article-list">
+            {{ range . }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+        </section>
+        {{- partial "pagination.html" $ -}}
+    {{- end }}
+
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

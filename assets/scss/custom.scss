@@ -1,3 +1,15 @@
-/*
-    You can add your own custom styles here.
-*/
+.homepage-intro {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    margin-bottom: 24px;
+    padding: 28px 32px;
+}
+
+.homepage-intro .article-content > :first-child {
+    margin-top: 0;
+}
+
+.homepage-intro .article-content > :last-child {
+    margin-bottom: 0;
+}
