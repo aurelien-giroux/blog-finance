@@ -125,7 +125,7 @@ Climate transition makes the stakes particularly clear, but the argument extends
 
 [12] David H. Wolpert, “The Lack of A Priori Distinctions Between Learning Algorithms”, *Neural Computation* 8, 1341–1390 (1996); David H. Wolpert and William G. Macready, “No Free Lunch Theorems for Optimization”, *IEEE Transactions on Evolutionary Computation* 1, 67–82 (1997).
 
-[13] Stephen Morris, “The Common Prior Assumption in Economic Theory”, *Economics and Philosophy* 11, 227–253 (1995), quotation p. 227; Robert J. Aumann, “Agreeing to Disagree”, *The Annals of Statistics* 4, 1236–1239 (1976); David Blackwell and Lester Dubins, “Merging of Opinions with Increasing Information”, *The Annals of Statistics* 33, 882–886 (1962).
+[13] Stephen Morris, “The Common Prior Assumption in Economic Theory”, *Economics and Philosophy* 11, 227–253 (1995), quotation p. 227; Robert J. Aumann, “Agreeing to Disagree”, *The Annals of Statistics* 4, 1236–1239 (1976); David Blackwell and Lester Dubins, “Merging of Opinions with Increasing Information”, *The Annals of Mathematical Statistics* 33, 882–886 (1962).
 
 [14] Louis Bachelier, *Théorie de la spéculation* (1900); Friedrich A. Hayek, “The Use of Knowledge in Society”, *The American Economic Review* 35, 519–530 (1945); Douglas T. Breeden and Robert H. Litzenberger, “Prices of State-Contingent Claims Implicit in Option Prices”, *The Journal of Business* 51, 621–651 (1978).
 
