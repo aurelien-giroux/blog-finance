@@ -13,4 +13,4 @@ menu:
 
 Ce site rassemble des articles personnels, des notes techniques et des essais. J’y publierai notamment des travaux autour de la finance quantitative, des probabilités, de l’épistémologie et de la modélisation, ainsi que des textes plus libres lorsque le sujet s’y prête.
 
-L’objectif est de conserver une distinction claire entre résultats établis, arguments, hypothèses de travail et idées exploratoires. Les articles pourront aller de l’intuition accessible au développement mathématique détaillé.
+Les articles pourront aller de l’intuition accessible au développement mathématique détaillé.
