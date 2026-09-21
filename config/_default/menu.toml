@@ -6,3 +6,12 @@
     [social.params]
         icon   = "brand-github"
         newTab = true
+
+[[social]]
+    identifier = "linkedin"
+    name       = "LinkedIn"
+    url        = "https://www.linkedin.com/in/aur%C3%A9lien-g-95a372218/"
+
+    [social.params]
+        icon   = "brand-linkedin"
+        newTab = true
