@@ -1,0 +1,169 @@
+---
+title: "What Can a Market See?"
+description: "A better forecast is useful only where it can change a decision. What happens when the models, rules or securities leave the important difference out?"
+slug: "what-can-a-market-see"
+author: "Aurélien Giroux"
+draft: false
+date: 2026-09-25
+math: false
+categories:
+  - Finance
+  - Epistemology
+---
+
+Suppose you really do understand something the market does not. Why should that make you richer?
+
+“Trade on it” is the obvious answer. But an insight does not arrive with a suitable security attached. You may anticipate a technological change while finding that the companies best placed to benefit are already expensive. You may understand a risk that your fund is forbidden to hedge, or distinguish two possible futures that every available investment pays exactly the same way. In each case there is work to do between understanding the future and finding a worthwhile position.
+
+There is a question about the financial system here, as well as about the individual investor. Markets are often expected to reward sound judgment and withdraw capital from people who are repeatedly wrong. Friedman argued that unless businessmen behaved approximately as return maximisers, “it seems unlikely that they would remain in business for long.”[1] His claim concerned the behaviour that competition selects, rather than the calculations businessmen consciously perform. The related expectation that competition favours more accurate beliefs is known as the *market selection hypothesis*.[2] It depends on what people can do with their judgments. A comparison conducted through investment returns will recognise the differences expressed in those investments; a difference excluded from every permissible trade has no such opportunity to prove itself.
+
+What, then, can a market actually see? Here, *see* means more than “appear in today’s price”: a distinction becomes financially visible when it can change a valuation, a feasible position, or a later decision. To understand that visibility, we have to look at the securities, the rules under which they can be held, and the models through which investors interpret the evidence. An investor may need a better model, permission to take a position, a different security, or a more effective way to manage one. We also have to ask how much of the evidence a good decision really needs.
+
+## Which part of a forecast can you trade on?
+
+Consider a small, deliberately restricted market. You can put money into a fixed basket of loans or leave it in cash. You cannot buy the loans separately, and you must hold your investment until repayment. For now, suppose your only concern is the wealth those investments will deliver. Two analysts disagree about which borrowers are likely to default. Yet they give exactly the same probabilities to every possible total repayment from the basket. Their disagreement concerns the identities behind the losses, not the distribution of the amount you receive. Under either forecast, every permitted mixture of the basket and cash has the same prospects. Paying to find out which of these two analysts is right would not improve this particular investment choice.
+
+Now let the investor buy the loans separately. The identities become useful: the investor can avoid one borrower and lend to another. The evidence has not changed. The available decision has.
+
+There is another way to make the identities matter. Suppose the investor also owns a business whose income falls when a particular borrower gets into trouble. The investor now cares about the basket's repayment alongside that business income: do both fall together, or does one provide money when the other is doing badly? Agreement about the basket alone no longer settles its usefulness in the investor's overall finances. An investment can look quite different once we know what it is supposed to pay for.
+
+This is why the financial value of a forecast depends on the decision, the securities and the investor's other commitments. It is also why agreement on a price is weaker than agreement about the future. One buyer expects generous cash flows; another accepts a less optimistic forecast because the payment would be especially useful when other investments disappoint. They may accept the same price for different reasons. Even prices across many different payoffs must be interpreted through those reasons before they can be read as probabilities of what will happen. Paying more for money received in a crisis, for example, can reflect how badly that money is needed as well as how likely the crisis is.
+
+The holding period belongs in the example too. Allow sales before repayment, and a report about an individual borrower might become useful because it changes the price at which the basket can be sold. Two forecasts can agree about final repayment and differ about what an interim report will reveal. Once investors can respond to that report, we need to compare the strategies it permits, rather than just the investments held at the start.
+
+## When the rules prevent the trade
+
+> “Worldly wisdom teaches that it is better for reputation to fail conventionally than to succeed unconventionally.”
+>
+> — John Maynard Keynes, *The General Theory of Employment, Interest and Money* (1936), Chapter 12, Section V, p. 158.[3]
+
+The basket example is a case in which a particular forecast difference has no use among the available choices. Institutional restrictions can produce a more frustrating case: the analyst can describe a useful response, but cannot obtain permission to carry it out. Keynes was describing the professional risks of departing from convention. A formal approval rule can turn that pressure into a barrier to action.
+
+Imagine a fund with a rule that permits the cost of a protective hedge only when an approved risk model records a corresponding benefit. An analyst thinks a change in industrial policy could sharply reduce the value of some holdings and proposes protection against that loss. The committee takes the concern seriously. But the policy change is absent from the model's approved scenarios, so the required assessment counts the cost of protection while giving no credit to the loss it could avoid. Under the rule, the hedge fails its approval test. The analyst has run into a circular requirement: the model being challenged must supply the recognised justification for acting on the challenge. Repeating the argument more accurately does not, by itself, change what the approval procedure accepts. The institution needs a way to assess the alternative scenario, revise the model, or authorise a decision under acknowledged disagreement. Until then, recognising the possible weakness of the official view and committing money to a response remain separate matters.
+
+An institution can become paralysed in this way: a credible assessment has no route to an authorised action. Apply the same rule to all the institutions that might take the other side of the prevailing view, and their inactivity begins to tell us about a shared restriction. It cannot be treated as independent confirmation that their concern was mistaken.
+
+> *A mispricing sustained by a constraint that also binds you cannot be harvested by you.*
+
+An investor proposing to exploit the discrepancy must therefore explain what makes the relevant position available to them. Otherwise the obstacle invoked to explain everyone else's inactivity blocks their own trade as well.
+
+Funding can have a similar effect even after a position has been approved. Shleifer and Vishny study investors who depend on other people's capital: losses can lead clients to withdraw precisely when an apparent discrepancy widens and the trade needs continued support.[4] Permission, capital and the capacity to wait all affect which views reach the market through positions. Having the better forecast does not supply these resources automatically.
+
+There is also a distinction between preventing a particular investor from trading and omitting the relevant trade altogether. If the loan basket is the only credit exposure anyone can hold, no amount of competition in that basket creates a borrower-specific position.
+
+Blume and Easley's “If You're So Smart, Why Aren't You Rich?” examines long-run market selection. In the complete-market economies they study, survival depends on beliefs and on how heavily consumers discount future consumption; within their assumed class of preferences, differences in risk aversion do not determine who survives.[2] Incomplete markets allow a revealing counterexample. Two states have identical payoffs under every available asset. A trader who badly misjudges their relative probabilities, but gets their combined probability right, drives out another whose forecast is closer overall but slightly wrong about that combined probability. The example rewards accuracy about the distinctions the investments can exploit, rather than accuracy about the full state of the world.[2]
+
+Some restrictions protect solvency or make obligations enforceable. Others may exclude an exposure that would improve allocation or risk management. The question is what a particular restriction accomplishes and what it prevents. Calling every rule a distortion would miss the first half of that question; appealing to market efficiency without examining the rules would miss the second.
+
+## What the model leaves out
+
+A useful relationship can disappear earlier still, before an analyst considers a trade. Suppose a portfolio system groups firms by industry and estimates their dependence from recent returns. Two holdings in different industries look comfortably diversified. But both must refinance in the same month, and both depend on the same lender. The relevant documents are public; the system never compares those fields. Putting the deadlines and lender identities together suggests a common vulnerability. If the lender becomes unable to renew credit at that time, both borrowers may struggle simultaneously, despite the different products they sell. That possibility changes the reason for holding the two loans together. It may justify reducing one exposure, finding protection, or investigating a borrower with a different source of finance. The analyst has to assess the mechanism and the price of each response, but at least the research now has a specific question to answer.
+
+Notice where the improvement came from. The lender names and dates were already in the records. Comparing them brought a relationship into the analysis that the earlier model had ignored. No new observation was created, but an investor with limited time and computing resources can make better use of the observations already available.
+
+Information theory draws an important distinction here. Processing a dataset cannot increase its Shannon information about a target; an invertible change of variables preserves that information.[5] Yet a transformation can make a relationship easier to detect, estimate or use. Sorting debt commitments by repayment date may make a concentration apparent that was very hard to see in separate company files. A different learning method may then exploit it.
+
+Xu and co-authors study this distinction by restricting the prediction methods available to the observer. What they call *usable information* can increase after processing: a limited method may learn from a representation of the data that it could not exploit in the original form.[6] The improvement is in what the method can extract from the record. Whether the proposed dependence really helps predict losses still has to be assessed against evidence.
+
+There is also a scarcity problem before any statistical test is run. Herbert Simon observed that “a wealth of information creates a poverty of attention.”[7] Once evidence is abundant, research has to decide which relationships deserve examination, which sources deserve comparison, and when the expected value of another investigation is lower than the value of acting. That allocation of attention is not solved by having access to more data. It is a larger problem than this article can settle, but it will matter increasingly wherever the raw material for investment research is plentiful and the capacity to examine it remains finite.
+
+Changing a modelling assumption is another matter. Replacing independence with common exposure to a lender changes the probabilities assigned to joint losses. So does choosing a fresh “uniform” distribution after changing variables. Equal probability for equal-sized intervals of euros per dollar gives a different forecast from equal probability for equal-sized intervals of dollars per euro: intervals evenly spaced on one scale are uneven on the other. Re-expressing the same forecast in the reciprocal rate preserves its probabilities. Imposing uniformity again changes them. The new model needs justification from the economic argument and the evidence, beyond the fact that the transformation can be computed.
+
+What should justify a model, then? Start by separating the reasons for accepting or rejecting it. A cash-flow projection that spends money twice violates an accounting identity. A dependence estimate rests on observations and carries sampling uncertainty. A scenario can respect both and still depend on a disputed assumption about policy. A mandate prohibiting a trade is different again: it restricts the investor's conduct, not what the economy can do. Lumping all four together as “constraints” makes it easy to mistake an institutional choice for empirical evidence, or an estimate for a physical necessity.
+
+The distinction also helps when several models agree. If every model in a collection ignores the common lender, their forecasts may be reassuringly close. Changing parameter values inside that collection does little to investigate the shared omission. A more revealing test introduces the missing relationship and asks what follows, how much the evidence supports it, and whether the investment decision changes. That is more informative than another decimal place in the consensus forecast.
+
+## How much do we need to know?
+
+Nobody can investigate every relationship before making an investment. The practical question is which unresolved ones could change the decision.
+
+Suppose two investment proposals have already been compared on the same basis, including their costs and the investor's treatment of risk. Under every model still being taken seriously, proposal A is preferable to B. The estimated advantage varies from €80,000 to €140,000. Learning which model is closer to the truth could improve the valuation, but it would leave the choice between these two proposals unchanged. Now suppose the range runs from a €20,000 disadvantage to a €30,000 advantage. Further work on the assumption responsible for that reversal has a different purpose: it could change which proposal should be chosen.
+
+The numbers are illustrative. What matters is comparing the uncertainty with the margin between the alternatives, in terms that the decision actually uses. A large disagreement about something else may have no effect on the ranking. A small disagreement about a finely balanced choice may decide it. And selecting a portfolio is a different task from reporting its value accurately: the first comparison could support a clear choice while leaving too much uncertainty for a valuation required to be accurate within a few thousand euros. This is the decision-based view of information developed by Ronald Howard: uncertainty matters through its consequences for the choices we make.[8]
+
+There are several ways to make the decision less vulnerable. An investor worried about a borrower's dependence on one lender could investigate the refinancing arrangements. They could instead reduce the holding, or buy protection on terms that cover the relevant loss. Research improves the assessment of what may happen. Reducing or hedging the position changes what happens to the investor's money if it does. The preferred response depends on the value of the information, the price and effectiveness of the protection, and the remaining alternatives.
+
+For a more complicated portfolio, consider two small revisions to its forecast. One raises each borrower's default probability. Another keeps those individual probabilities unchanged but makes joint failures more likely around the two borrowers' shared refinancing date. With enough separate cases, default records can help assess the first revision. The second calls for evidence about joint failures under the relevant refinancing conditions. If those conditions rarely appear in the record, a change that matters greatly to the portfolio may remain difficult to distinguish statistically.
+
+Information geometry gives a way to compare how strongly these small changes alter the distribution of the observations.[5] That comparison can be set alongside their effect on portfolio losses and the adjustments feasible trades permit. Learning more about the shared lender and reducing the paired exposure would then address different parts of the same difficulty. This assessment concerns small changes within a specified model; larger departures and omitted mechanisms need their own examination.
+
+The same issue can be viewed as a problem of communication. Suppose an analyst holds a detailed report but can send the investor only a short message. What should the message preserve? Reproducing the report's contents faithfully is one objective. Preserving the investment choices that would have been made after reading it is another. Erkip and Cover study this question for repeated investment. An investor receives a description of information correlated with asset returns, limited to a fixed average number of bits per investment period; the description is chosen to maximise the improvement in long-run wealth growth. Their result characterises the trade-off between the amount communicated and that growth improvement, assuming the probabilistic relationship between the information and market returns is already known.[9] The loss from an inadequate description is evaluated through investment performance, rather than through failure to reconstruct the original information.
+
+For a simple illustration, return to an investor choosing between cash and a fixed loan basket. Suppose the complete report affects that choice only by identifying whether a particular refinancing warning applies. Within each of those two categories, further details never change the preferred investment. A message stating whether the warning applies preserves the choice, although it leaves out almost all of the report. A summary that keeps the company descriptions and omits the warning can be more comprehensive and less useful.
+
+A summary earns its brevity by preserving what the decision needs. Change the investment menu, the investor's obligations or the opportunity to trade later, and yesterday's adequate summary may be inadequate. The original records should remain available for the questions that have not yet occurred to us.
+
+## When a useful contract is missing
+
+Sometimes research improves a decision that the existing securities already allow. Sometimes it identifies an exposure that none of them provides. The second situation calls for a different response: can a suitable contract be created? Return to the two forecasts that agree about total loan repayments but disagree about which borrowers will fail. A payment based on total repayment cannot distinguish them. A payment based on an agreed record of individual defaults potentially can. The parties could fix their forecasts in advance and agree on a rule for comparing them with that record, with the payment depending on the comparison. They would also need to specify what counts as a default, who supplies the record, when it becomes final, how revisions are handled, and how the promised payment is secured. “Which forecast was better?” becomes a question about an identified observation and an agreed scoring rule.
+
+The rule determines what is rewarded. A comparison designed around ordinary outcomes need not give the same emphasis to rare disasters as a tail-sensitive contract. Nor will every participant value the resulting payments alike. One may want to back a view; another may want protection against an outcome in which both their forecast and their existing portfolio perform badly. Whether those motives produce a trade depends on the price and the participants' exposures. A forecast difference is a reason to examine a contract, not evidence that there is already demand for it.
+
+Some such payments could already be reproduced by combining existing securities. In that case, a standard contract might improve access or make the exposure simpler to transact. Where the available securities cannot reproduce the payment, a new claim can add an exposure. Both cases require usable settlement and financing arrangements, and the new contract remains subject to the institution's approval rules. Introducing it does not automatically remove the restriction that blocked the original trade.
+
+Even a well-designed contract answers only the question its observation can resolve. A record of defaults can compare default predictions while leaving open the causal role of policy, the consequences of another financing decision, or the prospects of a different group of firms. An institution still has to manage those unresolved questions.
+
+A payment between counterparties also needs a separate economic justification at the level of the system: useful insurance, better allocation or an investment made possible. Hirshleifer's analysis draws the distinction sharply: better information can yield a private gain even when the information has no social usefulness.[10] One trader's gain alone establishes none of those wider benefits.
+
+## What this changes for portfolio management
+
+For many investors, the immediate opportunity is to use the markets that already exist. The common-refinancing example might lead to a better diversified portfolio without a new security, a regulatory reform or a private dataset. Other relationships could support trend-following, a valuation trade, or a strategy that earns a return for carrying an exposure over time. The task is to find relationships whose consequences can be used in the actual portfolio, and to learn them before the opportunity disappears.
+
+A collection of forecasting models can help, but an overall league table can be a poor guide to their contributions. One model may estimate sales well and another the cost of inputs. Neither provides a satisfactory forecast of profit on its own; together they may support one, provided their assumptions about volumes, dates and prices fit. A model useful in stable markets may become misleading during a funding shock. The portfolio manager needs to know where each forecast helps, what it leaves unresolved and how the sources relate to one another. Several reports repeating the same original forecast add less independent evidence than their number suggests.
+
+There is also a choice about what to observe and what to trade. For a manufacturer exposed to an input cost, the commodity price may be a more direct observation of that cost than the manufacturer's share price, which also reflects its debts, customers and other activities. But the share may be the investment through which the manager wants to express the resulting view. The learning problem must connect the observation to the payoff. Selecting a statistically predictable series and only later looking for a financial use can leave an impressive forecast with no worthwhile trade attached.
+
+Then there is timing. A small forecast advantage expected to last for months is different from one likely to disappear tomorrow, especially when entering and leaving the position both cost money. Gârleanu and Pedersen examine this problem with signals that decay at different speeds. In their model, the optimal trade depends on the existing portfolio and on where desired holdings are expected to move, with more persistent signals receiving greater weight in the portfolio towards which the investor adjusts.[11] The forecast and the trading policy have to be evaluated together.
+
+The same is true of the choice to wait for evidence. Keeping the present portfolio while investigating a relationship is already an investment decision: it preserves some exposures and forgoes others. A new disclosure may make the choice easier, but a competing investor may act first, or the price may move before the disclosure. A research procedure has to compare those consequences with the risks of acting now. Much of the raw material can be freely available; the difficulty is discovering and testing useful relationships quickly enough, combining them coherently, and choosing positions that remain attractive after costs.
+
+This is the portfolio-management application I want to develop. The aim is higher net investment performance against methods already capable of forecasting, allocating and trading under the same mandate.[12] What to observe, which models to build or revise, and what to hold have to be decided together, because each changes the value of the others. A hedge can make one uncertainty less urgent to resolve; a new relationship can change which data deserve attention; a trade can make later trades cheaper or harder. A good forecast fed into an unchanged allocation rule leaves those interactions unattended.
+
+## What can the market reward?
+
+Suppose, then, that you really do understand something the market does not. The loan basket still pays on total repayments, however much you know about the borrowers; the committee still asks its approved model to justify the hedge, however clearly you have identified the model's omission. Turning the insight into a better decision requires finding, or making possible, the response it calls for. More observations will not create a missing contractual right; a new contract will not repair an unsupported forecast.
+
+Fama's familiar definition sets a demanding standard for the prices of existing securities:
+
+> “A market in which prices always ‘fully reflect’ available information is called ‘efficient.’”
+>
+> — Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work” (1970), p. 383.[13]
+
+That definition does not interpret itself. Fama insisted that a test of efficiency requires a model of price formation; he later made the resulting *joint-hypothesis problem* explicit. An abnormal return can reflect inefficient pricing, a bad model of expected returns, or some combination of the two.[13] The problem is different from the one developed here, but the distinction matters. Even when a security exists and trades, its price cannot tell us by itself whether our model for interpreting that price is adequate.
+
+Our restricted loan market raises another question. It could use all information relevant to total repayment and still leave the borrower-by-borrower disagreement financially silent. An incomplete opportunity set does not imply that the securities which do trade are inefficiently priced, just as efficient pricing of the basket does not make borrower-specific positions exist. The efficiency of existing prices and the adequacy of the available ways to express knowledge are different achievements.
+
+Investors have reason to seek better models and faster learning wherever these improve the use of existing opportunities. They also have reason to ask whether the opportunities themselves exclude a consequential part of what they know. A market may organise competition among its permitted positions extremely well while never testing the understanding those positions leave out. Before treating financial success as a verdict on knowledge, we should establish which knowledge was allowed to enter the contest.
+
+## References and notes
+
+The loan, committee, refinancing, currency and numerical investment comparisons are constructed illustrations, not reports of particular institutions or empirical results. The short-message example illustrates a decision criterion; it is not an example taken from Erkip and Cover's paper.
+
+The highlighted constraint principle and the change-of-variables question also appear in [All Roads Lead to Disagreement (I): Why Two Careful Analysts Can Still Disagree](https://aurelien-giroux.github.io/blog-finance/p/all-roads-lead-to-disagreement-1/).
+
+[1] Milton Friedman, “The Methodology of Positive Economics”, in *Essays in Positive Economics* (University of Chicago Press, 1953), pp. 3–43, especially pp. 21–22. The quoted words are from p. 22. The survival argument supports his account of behaviour approximating return maximisation; it does not require businessmen consciously to perform the theorist's calculations.
+
+[2] Lawrence Blume and David Easley, “If You're So Smart, Why Aren't You Rich? Belief Selection in Complete and Incomplete Markets”, *Econometrica* 74(4), 929–966 (2006). DOI: 10.1111/j.1468-0262.2006.00691.x. See Section 5, the example on portfolio-choice effects. The authors' “payoff functions” are utilities of consumption; their separate portfolio example concerns distinctions that the assets fail to span.
+
+[3] John Maynard Keynes, *The General Theory of Employment, Interest and Money* (Macmillan, 1936), Chapter 12, Section V, p. 158. The passage concerns reputational pressure on long-term investors, including those answerable to committees, boards or banks. The approved-model rule in this article is a separate constructed example.
+
+[4] Andrei Shleifer and Robert W. Vishny, “The Limits of Arbitrage”, *The Journal of Finance* 52(1), 35–55 (1997). DOI: 10.1111/j.1540-6261.1997.tb03807.x.
+
+[5] Marc Mézard and Andrea Montanari, *Information, Physics, and Computation*, author draft, Chapter 1, Proposition 1.12 on data processing (2007); Korbinian Strimmer, *Statistics 2: Statistical Learning with Likelihood and Bayes*, Sections 4.2 and 5 on divergence, change of variables, data processing and local Fisher-information geometry. These results concern information under a specified probability model. The refinancing illustration compares this statistical distinguishability with the financial effects of the same changes.
+
+[6] Yilun Xu, Shengjia Zhao, Jiaming Song, Russell Stewart and Stefano Ermon, “A Theory of Usable Information under Computational Constraints”, *International Conference on Learning Representations* (2020), Sections 2–3.2. arXiv:2002.10689. Their predictive V-information is relative to a specified family of predictors. An increase in that quantity after processing is compatible with the data-processing inequality for Shannon mutual information.
+
+
+[7] Herbert A. Simon, “Designing Organizations for an Information-Rich World”, in Martin Greenberger, ed., *Computers, Communications, and the Public Interest* (Johns Hopkins Press, 1971), pp. 40–41. Simon's point is organisational: abundant information makes attention scarce and therefore creates an allocation problem. The investment application made here is an extension of that observation.
+
+[8] Ronald A. Howard, “Information Value Theory”, *IEEE Transactions on Systems Science and Cybernetics* 2(1), 22–26 (1966). DOI: 10.1109/TSSC.1966.300074. Howard develops the decision-based value of information. The €80,000–€140,000 advantage range and the comparison running from a €20,000 disadvantage to a €30,000 advantage illustrate stable and reversible rankings; they do not calculate the expected value of a specified signal.
+
+[9] Elza Erkip and Thomas M. Cover, “The Efficiency of Investment Information”, *IEEE Transactions on Information Theory* 44(3), 1026–1040 (1998). DOI: 10.1109/18.669153. Their information-budget comparison uses a known joint law and repeated independent, identically distributed observations, with long-run wealth growth as the objective. The communication allowance is measured per investment period over a block of observations.
+
+[10] Jack Hirshleifer, “The Private and Social Value of Information and the Reward to Inventive Activity”, *The American Economic Review* 61(4), 561–574 (1971), especially p. 561.
+
+[11] Nicolae Gârleanu and Lasse Heje Pedersen, “Dynamic Trading with Predictable Returns and Transaction Costs”, *The Journal of Finance* 68(6), 2309–2340 (2013). DOI: 10.1111/jofi.12080.
+
+[12] Evaluation standard. The method will have to beat methods that could genuinely compete for the mandate—strong forecasting-and-allocation systems, factor and characteristic strategies, and portfolio policies that already anticipate trading costs—under the same evidence dates, investment opportunities and costs. Any mathematical guarantee must apply to the procedure actually used. The investment record must account for the complete method, including the research and trades that failed. Higher net performance is the aim; that is the comparison through which it has to be demonstrated.
+
+[13] Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work”, *The Journal of Finance* 25(2), 383–417 (1970), definition p. 383 and specification of price formation p. 384, DOI: 10.1111/j.1540-6261.1970.tb00518.x; and Eugene F. Fama, “Efficient Capital Markets: II”, *The Journal of Finance* 46(5), 1575–1617 (1991), especially p. 1575, DOI: 10.1111/j.1540-6261.1991.tb04636.x. Fama's joint-hypothesis problem concerns the fact that efficiency tests require an asset-pricing model that supplies expected returns. It is distinct from the question developed here of whether a financially relevant distinction can be expressed through the available securities and admissible positions.
