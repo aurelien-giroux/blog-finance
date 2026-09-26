@@ -10,6 +10,7 @@ readingTimeMinutes: 40
 categories:
   - Finance
   - Epistemology
+  - Mathematics
 ---
 
 Two lenders disagree about a group of utilities. One expects an industrial transition that some of the borrowers will struggle to finance. The other expects them to adapt without much damage to their creditors. Both have models, evidence and arguments, and neither finds the other convincing.
