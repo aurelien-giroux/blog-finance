@@ -117,7 +117,7 @@ Then there is timing. A small forecast advantage expected to last for months is 
 
 The same is true of the choice to wait for evidence. Keeping the present portfolio while investigating a relationship is already an investment decision: it preserves some exposures and forgoes others. A new disclosure may make the choice easier, but a competing investor may act first, or the price may move before the disclosure. A research procedure has to compare those consequences with the risks of acting now. Much of the raw material can be freely available; the difficulty is discovering and testing useful relationships quickly enough, combining them coherently, and choosing positions that remain attractive after costs.
 
-This is the portfolio-management application I want to develop. The aim is higher net investment performance against methods already capable of forecasting, allocating and trading under the same mandate.[12] What to observe, which models to build or revise, and what to hold have to be decided together, because each changes the value of the others. A hedge can make one uncertainty less urgent to resolve; a new relationship can change which data deserve attention; a trade can make later trades cheaper or harder. A good forecast fed into an unchanged allocation rule leaves those interactions unattended.
+This is the portfolio-management application I want to develop. The aim is higher net investment performance against methods already capable of forecasting, allocating and trading under the same mandate, compared on the same evidence dates, investment opportunities and costs. Serious comparators include strong forecasting-and-allocation systems, factor and characteristic strategies, and portfolio policies that already account for trading costs. The complete record matters, including research and trades that fail. What to observe, which models to build or revise, and what to hold have to be decided together, because each changes the value of the others. A hedge can make one uncertainty less urgent to resolve; a new relationship can change which data deserve attention; a trade can make later trades cheaper or harder. A good forecast fed into an unchanged allocation rule leaves those interactions unattended.
 
 ## What can the market reward?
 
@@ -127,43 +127,36 @@ Fama's familiar definition sets a demanding standard for the prices of existing 
 
 > “A market in which prices always ‘fully reflect’ available information is called ‘efficient.’”
 >
-> — Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work” (1970), p. 383.[13]
+> — Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work” (1970), p. 383.[12]
 
-That definition does not interpret itself. Fama insisted that a test of efficiency requires a model of price formation; he later made the resulting *joint-hypothesis problem* explicit. An abnormal return can reflect inefficient pricing, a bad model of expected returns, or some combination of the two.[13] The problem is different from the one developed here, but the distinction matters. Even when a security exists and trades, its price cannot tell us by itself whether our model for interpreting that price is adequate.
+That definition does not interpret itself. Fama insisted that a test of efficiency requires a model of price formation; he later made the resulting *joint-hypothesis problem* explicit. An abnormal return can reflect inefficient pricing, a bad model of expected returns, or some combination of the two.[12] The problem is different from the one developed here, but the distinction matters. Even when a security exists and trades, its price cannot tell us by itself whether our model for interpreting that price is adequate.
 
 Our restricted loan market raises another question. It could use all information relevant to total repayment and still leave the borrower-by-borrower disagreement financially silent. An incomplete opportunity set does not imply that the securities which do trade are inefficiently priced, just as efficient pricing of the basket does not make borrower-specific positions exist. The efficiency of existing prices and the adequacy of the available ways to express knowledge are different achievements.
 
 Investors have reason to seek better models and faster learning wherever these improve the use of existing opportunities. They also have reason to ask whether the opportunities themselves exclude a consequential part of what they know. A market may organise competition among its permitted positions extremely well while never testing the understanding those positions leave out. Before treating financial success as a verdict on knowledge, we should establish which knowledge was allowed to enter the contest.
 
-## References and notes
+## References
 
-The loan, committee, refinancing, currency and numerical investment comparisons are constructed illustrations, not reports of particular institutions or empirical results. The short-message example illustrates a decision criterion; it is not an example taken from Erkip and Cover's paper.
+[1] Milton Friedman, “The Methodology of Positive Economics”, in *Essays in Positive Economics* (University of Chicago Press, 1953), pp. 3–43, especially pp. 21–22.
 
-The highlighted constraint principle and the change-of-variables question also appear in [All Roads Lead to Disagreement (I): Why Two Careful Analysts Can Still Disagree](https://aurelien-giroux.github.io/blog-finance/p/all-roads-lead-to-disagreement-1/).
+[2] Lawrence Blume and David Easley, “If You're So Smart, Why Aren't You Rich? Belief Selection in Complete and Incomplete Markets”, *Econometrica* 74(4), 929–966 (2006), DOI: 10.1111/j.1468-0262.2006.00691.x, especially Section 5.
 
-[1] Milton Friedman, “The Methodology of Positive Economics”, in *Essays in Positive Economics* (University of Chicago Press, 1953), pp. 3–43, especially pp. 21–22. The quoted words are from p. 22. The survival argument supports his account of behaviour approximating return maximisation; it does not require businessmen consciously to perform the theorist's calculations.
+[3] John Maynard Keynes, *The General Theory of Employment, Interest and Money* (Macmillan, 1936), Chapter 12, Section V, p. 158.
 
-[2] Lawrence Blume and David Easley, “If You're So Smart, Why Aren't You Rich? Belief Selection in Complete and Incomplete Markets”, *Econometrica* 74(4), 929–966 (2006). DOI: 10.1111/j.1468-0262.2006.00691.x. See Section 5, the example on portfolio-choice effects. The authors' “payoff functions” are utilities of consumption; their separate portfolio example concerns distinctions that the assets fail to span.
+[4] Andrei Shleifer and Robert W. Vishny, “The Limits of Arbitrage”, *The Journal of Finance* 52(1), 35–55 (1997), DOI: 10.1111/j.1540-6261.1997.tb03807.x.
 
-[3] John Maynard Keynes, *The General Theory of Employment, Interest and Money* (Macmillan, 1936), Chapter 12, Section V, p. 158. The passage concerns reputational pressure on long-term investors, including those answerable to committees, boards or banks. The approved-model rule in this article is a separate constructed example.
+[5] Marc Mézard and Andrea Montanari, *Information, Physics, and Computation*, author draft (2007), Chapter 1, Proposition 1.12; Korbinian Strimmer, *Statistics 2: Statistical Learning with Likelihood and Bayes*, Sections 4.2 and 5.
 
-[4] Andrei Shleifer and Robert W. Vishny, “The Limits of Arbitrage”, *The Journal of Finance* 52(1), 35–55 (1997). DOI: 10.1111/j.1540-6261.1997.tb03807.x.
+[6] Yilun Xu, Shengjia Zhao, Jiaming Song, Russell Stewart and Stefano Ermon, “A Theory of Usable Information under Computational Constraints”, *International Conference on Learning Representations* (2020), Sections 2–3.2, arXiv:2002.10689.
 
-[5] Marc Mézard and Andrea Montanari, *Information, Physics, and Computation*, author draft, Chapter 1, Proposition 1.12 on data processing (2007); Korbinian Strimmer, *Statistics 2: Statistical Learning with Likelihood and Bayes*, Sections 4.2 and 5 on divergence, change of variables, data processing and local Fisher-information geometry. These results concern information under a specified probability model. The refinancing illustration compares this statistical distinguishability with the financial effects of the same changes.
+[7] Herbert A. Simon, “Designing Organizations for an Information-Rich World”, in Martin Greenberger, ed., *Computers, Communications, and the Public Interest* (Johns Hopkins Press, 1971), pp. 40–41.
 
-[6] Yilun Xu, Shengjia Zhao, Jiaming Song, Russell Stewart and Stefano Ermon, “A Theory of Usable Information under Computational Constraints”, *International Conference on Learning Representations* (2020), Sections 2–3.2. arXiv:2002.10689. Their predictive V-information is relative to a specified family of predictors. An increase in that quantity after processing is compatible with the data-processing inequality for Shannon mutual information.
+[8] Ronald A. Howard, “Information Value Theory”, *IEEE Transactions on Systems Science and Cybernetics* 2(1), 22–26 (1966), DOI: 10.1109/TSSC.1966.300074.
 
-
-[7] Herbert A. Simon, “Designing Organizations for an Information-Rich World”, in Martin Greenberger, ed., *Computers, Communications, and the Public Interest* (Johns Hopkins Press, 1971), pp. 40–41. Simon's point is organisational: abundant information makes attention scarce and therefore creates an allocation problem. The investment application made here is an extension of that observation.
-
-[8] Ronald A. Howard, “Information Value Theory”, *IEEE Transactions on Systems Science and Cybernetics* 2(1), 22–26 (1966). DOI: 10.1109/TSSC.1966.300074. Howard develops the decision-based value of information. The €80,000–€140,000 advantage range and the comparison running from a €20,000 disadvantage to a €30,000 advantage illustrate stable and reversible rankings; they do not calculate the expected value of a specified signal.
-
-[9] Elza Erkip and Thomas M. Cover, “The Efficiency of Investment Information”, *IEEE Transactions on Information Theory* 44(3), 1026–1040 (1998). DOI: 10.1109/18.669153. Their information-budget comparison uses a known joint law and repeated independent, identically distributed observations, with long-run wealth growth as the objective. The communication allowance is measured per investment period over a block of observations.
+[9] Elza Erkip and Thomas M. Cover, “The Efficiency of Investment Information”, *IEEE Transactions on Information Theory* 44(3), 1026–1040 (1998), DOI: 10.1109/18.669153.
 
 [10] Jack Hirshleifer, “The Private and Social Value of Information and the Reward to Inventive Activity”, *The American Economic Review* 61(4), 561–574 (1971), especially p. 561.
 
-[11] Nicolae Gârleanu and Lasse Heje Pedersen, “Dynamic Trading with Predictable Returns and Transaction Costs”, *The Journal of Finance* 68(6), 2309–2340 (2013). DOI: 10.1111/jofi.12080.
+[11] Nicolae Gârleanu and Lasse Heje Pedersen, “Dynamic Trading with Predictable Returns and Transaction Costs”, *The Journal of Finance* 68(6), 2309–2340 (2013), DOI: 10.1111/jofi.12080.
 
-[12] Evaluation standard. The method will have to beat methods that could genuinely compete for the mandate—strong forecasting-and-allocation systems, factor and characteristic strategies, and portfolio policies that already anticipate trading costs—under the same evidence dates, investment opportunities and costs. Any mathematical guarantee must apply to the procedure actually used. The investment record must account for the complete method, including the research and trades that failed. Higher net performance is the aim; that is the comparison through which it has to be demonstrated.
-
-[13] Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work”, *The Journal of Finance* 25(2), 383–417 (1970), definition p. 383 and specification of price formation p. 384, DOI: 10.1111/j.1540-6261.1970.tb00518.x; and Eugene F. Fama, “Efficient Capital Markets: II”, *The Journal of Finance* 46(5), 1575–1617 (1991), especially p. 1575, DOI: 10.1111/j.1540-6261.1991.tb04636.x. Fama's joint-hypothesis problem concerns the fact that efficiency tests require an asset-pricing model that supplies expected returns. It is distinct from the question developed here of whether a financially relevant distinction can be expressed through the available securities and admissible positions.
+[12] Eugene F. Fama, “Efficient Capital Markets: A Review of Theory and Empirical Work”, *The Journal of Finance* 25(2), 383–417 (1970), especially pp. 383–384, DOI: 10.1111/j.1540-6261.1970.tb00518.x; Eugene F. Fama, “Efficient Capital Markets: II”, *The Journal of Finance* 46(5), 1575–1617 (1991), especially p. 1575, DOI: 10.1111/j.1540-6261.1991.tb04636.x.
