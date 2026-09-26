@@ -157,23 +157,23 @@ Hayek's closing appeal to humility was a warning against turning limited knowled
 
 [1] Richard T. Cox, “Probability, Frequency and Reasonable Expectation”, *American Journal of Physics* 14, 1–13 (1946); Edwin T. Jaynes, *Probability Theory: The Logic of Science* (2003).
 
-[2] Frank H. Knight, *Risk, Uncertainty and Profit* (1921); Daniel Ellsberg, “Risk, Ambiguity, and the Savage Axioms”, *The Quarterly Journal of Economics* 75, 643–669 (1961); John Maynard Keynes, “The General Theory of Employment”, *The Quarterly Journal of Economics* 51, 209–223 (1937). The opening quotation is from p. 214.
+[2] Frank H. Knight, *Risk, Uncertainty and Profit* (1921); Daniel Ellsberg, “Risk, Ambiguity, and the Savage Axioms”, *The Quarterly Journal of Economics* 75, 643–669 (1961); John Maynard Keynes, “The General Theory of Employment”, *The Quarterly Journal of Economics* 51, 209–223 (1937), quotation p. 214.
 
-[3] Ricardo J. Caballero and Arvind Krishnamurthy, “Collective Risk Management in a Flight to Quality Episode”, *The Journal of Finance* 63, 2195–2230 (2008); Ilke Aydogan, Loïc Berger, Valentina Bosetti and Ning Liu, “Three Layers of Uncertainty”, *Journal of the European Economic Association* 21, 2209–2236 (2023). See also John Kay and Mervyn King, *Radical Uncertainty* (2020), and Francis X. Diebold, Neil A. Doherty and Richard J. Herring, eds., *The Known, the Unknown, and the Unknowable in Financial Risk Management* (2010).
+[3] Ricardo J. Caballero and Arvind Krishnamurthy, “Collective Risk Management in a Flight to Quality Episode”, *The Journal of Finance* 63, 2195–2230 (2008); Ilke Aydogan, Loïc Berger, Valentina Bosetti and Ning Liu, “Three Layers of Uncertainty”, *Journal of the European Economic Association* 21, 2209–2236 (2023); John Kay and Mervyn King, *Radical Uncertainty* (2020); Francis X. Diebold, Neil A. Doherty and Richard J. Herring, eds., *The Known, the Unknown, and the Unknowable in Financial Risk Management* (2010).
 
 [4] Emanuele Campiglio, Louis Daumas, Pierre Monnin and Adrian von Jagow, “Climate-Related Risks in Financial Assets”, *Journal of Economic Surveys* 37, 950–992 (2023); Stefano Giglio, Bryan Kelly and Johannes Stroebel, “Climate Finance”, *Annual Review of Financial Economics* 13, 15–36 (2021); Riccardo Rebonato, “Asleep at the Wheel? The Risk of Sudden Price Adjustments for Climate Risk”, *The Journal of Portfolio Management* 50(2), 48–63 (2023); Tristan Jourde and Quentin Moreau, *Systemic Climate Risk*, Banque de France (2025).
 
-[5] George M. Frankfurter, review of John H. Cochrane's *Asset Pricing*, revised edition, *Journal of Economic Behavior & Organization* 60, 603–608 (2006). The editor's remark is reported by Frankfurter, not attributed to Cochrane.
+[5] George M. Frankfurter, review of John H. Cochrane's *Asset Pricing*, revised edition, *Journal of Economic Behavior & Organization* 60, 603–608 (2006).
 
 [6] Itzhak Gilboa and David Schmeidler, “Maxmin Expected Utility with Non-Unique Prior” (1989); Fabio Maccheroni, Massimo Marinacci and Aldo Rustichini, “Ambiguity Aversion, Robustness, and the Variational Representation of Preferences” (2006); Lars Peter Hansen and Thomas J. Sargent, *Robustness* (2008) and “Structured Ambiguity and Model Misspecification” (2022).
 
-[7] Edwin T. Jaynes, “Information Theory and Statistical Mechanics”, *Physical Review* 106, 620–630 (1957); John E. Shore and Rodney W. Johnson, “Axiomatic Derivation of the Principle of Maximum Entropy and the Principle of Minimum Cross-Entropy”, *IEEE Transactions on Information Theory* 26, 26–37 (1980). On the debate over composition assumptions, see Constantino Tsallis, “Conceptual Inadequacy of the Shore and Johnson Axioms for Wide Classes of Complex Systems”, *Entropy* 17, 2853–2861 (2015).
+[7] Edwin T. Jaynes, “Information Theory and Statistical Mechanics”, *Physical Review* 106, 620–630 (1957); John E. Shore and Rodney W. Johnson, “Axiomatic Derivation of the Principle of Maximum Entropy and the Principle of Minimum Cross-Entropy”, *IEEE Transactions on Information Theory* 26, 26–37 (1980); Constantino Tsallis, “Conceptual Inadequacy of the Shore and Johnson Axioms for Wide Classes of Complex Systems”, *Entropy* 17, 2853–2861 (2015).
 
-[8] Brian Skyrms, *Causal Necessity* (1980); George E. P. Box, “Science and Statistics”, *Journal of the American Statistical Association* 71, 791–799 (1976), quotation p. 792; Persi Diaconis and David Freedman, “On the Consistency of Bayes Estimates”, *The Annals of Statistics* 14, 1–26 (1986). Diaconis and Freedman provide a technical reminder that Bayesian updating itself does not guarantee consistency in every nonparametric setting.
+[8] Brian Skyrms, *Causal Necessity* (1980); George E. P. Box, “Science and Statistics”, *Journal of the American Statistical Association* 71, 791–799 (1976), quotation p. 792; Persi Diaconis and David Freedman, “On the Consistency of Bayes Estimates”, *The Annals of Statistics* 14, 1–26 (1986).
 
 [9] Bruno de Finetti, *Theory of Probability* (1974), Preface.
 
-[10] Joseph Bertrand, *Calcul des probabilités* (1889). Jaynes's discussion of symmetry is in *Probability Theory: The Logic of Science* (2003).
+[10] Joseph Bertrand, *Calcul des probabilités* (1889); Edwin T. Jaynes, *Probability Theory: The Logic of Science* (2003).
 
 [11] Nelson Goodman, *Fact, Fiction, and Forecast* (1955); Satosi Watanabe, *Knowing and Guessing* (1969).
 
@@ -191,6 +191,6 @@ Hayek's closing appeal to humility was a warning against turning limited knowled
 
 [18] Robert K. Merton, “The Self-Fulfilling Prophecy”, *The Antioch Review* 8, 193–210 (1948); Donald MacKenzie, *An Engine, Not a Camera: How Financial Models Shape Markets* (2006).
 
-[19] Kenneth J. Arrow, “Le rôle des valeurs boursières pour la répartition la meilleure des risques” (1953); Gérard Debreu, *Theory of Value* (1959). The proposed comparison and the division of responsibility are developed in Aurélien Giroux, *All Roads Lead to Disagreement: Deep Uncertainty and the Missing Primitive of Finance*, manuscript version 5.3.
+[19] Kenneth J. Arrow, “Le rôle des valeurs boursières pour la répartition la meilleure des risques” (1953); Gérard Debreu, *Theory of Value* (1959).
 
 [20] Friedrich A. Hayek, “The Pretence of Knowledge”, Nobel Memorial Lecture (1974); Carveth Read, *Logic: Deductive and Inductive*, 4th edition (1920).
