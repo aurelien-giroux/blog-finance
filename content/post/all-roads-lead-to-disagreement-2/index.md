@@ -6,7 +6,6 @@ author: "Aurélien Giroux"
 draft: false
 date: 2026-09-26
 math: true
-readingTimeMinutes: 40
 categories:
   - Finance
   - Epistemology
@@ -49,29 +48,29 @@ For this contract, the lenders want to reward how well each forecast anticipated
 
 The comparison should also work over time. Suppose the contract settles first on a report about refinancing conditions and later on defaults. The second settlement should use forecasts made after the refinancing report is known, so that its information is not counted twice. Each settlement can then simply be added to the earlier ones. I want a payment tied to the relative probability of what occurred, with settlements that add up in this way.
 
-I will use a baseline called *relative surprise*. Call the more pessimistic lender A and the other lender B. When the result is known, divide the probability A gave it by the probability B gave it. A twofold ratio earns one unit of payment, a fourfold ratio earns two units, and an eightfold ratio earns three. A ratio of one half loses one unit. Equal probabilities produce no comparison payment. The operation that counts these doublings is the base-two logarithm, and one doubling is called a *bit*; the logarithm also gives intermediate payments for ratios between those values.
+I will use a baseline called *relative surprise*. I will call the more pessimistic lender **Stress** and the other **Resilience**. When the result is known, divide the probability Stress gave it by the probability Resilience gave it. A twofold ratio earns one unit of payment, a fourfold ratio earns two units, and an eightfold ratio earns three. A ratio of one half loses one unit. Equal probabilities produce no comparison payment. The operation that counts these doublings is the base-two logarithm, and one doubling is called a *bit*; the logarithm also gives intermediate payments for ratios between those values.
 
-Here is the whole contract on one example. A gives the low, middle and high bands 20%, 40% and 40%. B gives them 40%, 40% and 20%. They set the unit at €10,000 per doubling. For now there is no fixed entry fee.
+Here is the whole contract on one example. Stress gives the low, middle and high bands 20%, 40% and 40%. Resilience gives them 40%, 40% and 20%. They set the unit at €10,000 per doubling. For now there is no fixed entry fee.
 
-| Defaults over five years | A's forecast | B's forecast | Payment to A |
+| Defaults over five years | Stress's forecast | Resilience's forecast | Payment to Stress |
 |---|---|---|---|
 | Fewer than 5 | 20% | 40% | −€10,000 |
 | 5 to 9 | 40% | 40% | €0 |
 | 10 or more | 40% | 20% | +€10,000 |
 
-If ten or more utilities default, A had given that band twice B's probability, and B pays A €10,000. In the low band it is the reverse. In the middle band they agreed, and nothing changes hands. Every amount in the table was fixed before the first default.
+If ten or more utilities default, Stress had given that band twice Resilience's probability, and Resilience pays Stress €10,000. In the low band it is the reverse. In the middle band they agreed, and nothing changes hands. Every amount in the table was fixed before the first default.
 
-We can now see what it would mean to add detail without adding disagreement. Suppose the lenders divide “ten or more” into “ten to fourteen” and “fifteen or more”. They still disagree about the chance of reaching ten defaults. But suppose both say that, *if ten or more defaults occur*, the two more detailed outcomes are equally likely. A therefore divides its 40% into 20% and 20%; B divides its 20% into 10% and 10%. In either new category A still assigned twice B's probability, so the payment remains €10,000. Learning which of these categories occurred gives no further reason to favour one forecast over the other. Later we will examine a different subdivision, in which the lenders also disagree about what happens once defaults reach ten.
+We can now see what it would mean to add detail without adding disagreement. Suppose the lenders divide “ten or more” into “ten to fourteen” and “fifteen or more”. They still disagree about the chance of reaching ten defaults. But suppose both say that, *if ten or more defaults occur*, the two more detailed outcomes are equally likely. Stress therefore divides its 40% into 20% and 20%; Resilience divides its 20% into 10% and 10%. In either new category Stress still assigned twice Resilience's probability, so the payment remains €10,000. Learning which of these categories occurred gives no further reason to favour one forecast over the other. Later we will examine a different subdivision, in which the lenders also disagree about what happens once defaults reach ten.
 
-A is not paid merely for sounding alarmed. Its higher probability of the high band had to be accompanied by a lower probability elsewhere, here in the low band, where the contract can cost it money. Nor does one win establish general forecasting superiority: B also gave the high band a real chance, one in five. The payment records which forecast assigned more probability to what happened. Whether A forecasts better across repeated observations is a further question.
+Stress is not paid merely for sounding alarmed. Its higher probability of the high band had to be accompanied by a lower probability elsewhere, here in the low band, where the contract can cost it money. Nor does one win establish general forecasting superiority: Resilience also gave the high band a real chance, one in five. The payment records which forecast assigned more probability to what happened. Whether Stress forecasts better across repeated observations is a further question.
 
 Why use a logarithm rather than another function of the probability ratio? Three arguments help explain the choice.
 
-The first concerns how forecasts are evaluated. A *scoring rule* is a formula chosen in advance that takes a probability forecast and the outcome that occurs, then returns a number—the *score*. Here higher scores are better. Because a forecast gives a probability to every outcome, a score can reward how much confidence was placed on what happened, not merely whether the most likely category came up. The logarithmic rule takes the logarithm of the probability assigned to the outcome that occurred. In the high band, A's 40% gives a score of about −1.32, while B's 20% gives about −2.32. A's score is higher by one. Multiplying that difference by €10,000 gives the payment in the table.[2]
+The first concerns how forecasts are evaluated. A *scoring rule* is a formula chosen in advance that takes a probability forecast and the outcome that occurs, then returns a number—the *score*. Here higher scores are better. Because a forecast gives a probability to every outcome, a score can reward how much confidence was placed on what happened, not merely whether the most likely category came up. The logarithmic rule takes the logarithm of the probability assigned to the outcome that occurred. In the high band, Stress's 40% gives a score of about −1.32, while Resilience's 20% gives about −2.32. Stress's score is higher by one. Multiplying that difference by €10,000 gives the payment in the table.[2]
 
 The scores can be negative; the difference between them determines who pays. More importantly, a rule needs to give the forecaster a reason to report their genuine uncertainty rather than exaggerate confidence. A scoring rule is *proper* when reporting one's actual probabilities maximises the expected score, computed with those same probabilities. It is *strictly proper* when every other report does worse. The logarithmic rule is strictly proper. It is also essentially the only such rule, provided there are at least three possible outcomes, the rule is smooth, and the score uses the reported forecast only through the probability given to the outcome that occurred, a requirement called *locality*. For the payment, which subtracts one lender's score from the other's, the only freedom left is the choice of unit.[2]
 
-The second argument starts from a budget for a different kind of bet. Suppose A pays a stake and receives a non-negative multiple of it when the default band is known. B offers any payment schedule whose expected payout under B's probabilities is no greater than the stake. Among all such schedules, A chooses the one with the highest expected logarithm of the amount returned per unit staked. Logarithms add when successive returns are reinvested, which is why this objective is used to study multiplicative wealth growth. Under this objective, A chooses a multiple equal to A's probability divided by B's: half the stake back in the low band, the stake in the middle, double in the high band.[3] The logarithm of that multiple is relative surprise again. This reinvestment bet and the signed payment in the table are different contracts. A lender maximising expected money would instead stake everything on the high band.
+The second argument starts from a budget for a different kind of bet. Suppose Stress pays a stake and receives a non-negative multiple of it when the default band is known. Resilience offers any payment schedule whose expected payout under Resilience's probabilities is no greater than the stake. Among all such schedules, Stress chooses the one with the highest expected logarithm of the amount returned per unit staked. Logarithms add when successive returns are reinvested, which is why this objective is used to study multiplicative wealth growth. Under this objective, Stress chooses a multiple equal to Stress's probability divided by Resilience's: half the stake back in the low band, the stake in the middle, double in the high band.[3] The logarithm of that multiple is relative surprise again. This reinvestment bet and the signed payment in the table are different contracts. A lender maximising expected money would instead stake everything on the high band.
 
 The third argument returns to geometry. A proper scoring rule measures the discrepancy between two forecasts by asking how much expected score a forecaster would lose by reporting the other one. For the logarithmic rule, that loss is the expected relative surprise: 0.2 bits per settlement in the lenders' example. It is not quite a distance, since swapping the two forecasts can change it, but for nearby forecasts it behaves like one, and what it then measures is how readily observations can tell the two forecasts apart.
 
@@ -79,16 +78,16 @@ Suppose we observe many independent borrowers with the same default probability.
 
 The *Fisher information metric* measures small changes in probabilities against this sampling noise. For a single yes-or-no event, its squared distance is the squared change in probability divided by the variance of one observation. The same one-point change is therefore a larger distance near 1% than near 50%. For nearby forecasts, the expected relative surprise is proportional to this squared distance, so the expected payment is larger where observations can distinguish the forecasts more easily. The first box derives this.[4][16]
 
-This geometry also respects the earlier subdivision of the high band, in which A's 40% became 20% and 20% and B's 20% became 10% and 10%: the extra detail leaves the distance unchanged. Čencov proved that Fisher's metric is, up to scale, the only way of measuring small differences between forecasts that stays unchanged, for every number of outcomes, whenever outcomes are split in proportions both forecasts share.[4] Other measures of disagreement share Fisher's geometry for nearby forecasts, but among proper scoring rules only the logarithm has it everywhere, at a fixed scale.
+This geometry also respects the earlier subdivision of the high band, in which Stress's 40% became 20% and 20% and Resilience's 20% became 10% and 10%: the extra detail leaves the distance unchanged. Čencov proved that Fisher's metric is, up to scale, the only way of measuring small differences between forecasts that stays unchanged, for every number of outcomes, whenever outcomes are split in proportions both forecasts share.[4] Other measures of disagreement share Fisher's geometry for nearby forecasts, but among proper scoring rules only the logarithm has it everywhere, at a fixed scale.
 
 Other questions call for other geometries. Relative surprise requires no distance between different outcomes: it compares the probabilities assigned to the outcome that occurred. Suppose instead that the lenders want a comparison sensitive to how far their predicted default counts differ. A difference of one default might matter less than a difference of twenty. A *Wasserstein distance* begins by specifying the cost of moving probability from one possible outcome to another, then finds the least total cost of converting one forecast distribution into the other.[14] Where outcomes are actual default counts, that cost could be the difference between the counts. Where outcomes describe losses or electricity shortfalls, it could instead use euros or megawatt-hours.
 
-For the simplest transport distance, there is also a contingent payment whose expected value under A's forecast exceeds its expected value under B's by exactly that distance. The second box constructs the payment and compares it with the logarithmic one. The choice is between specified financial questions, not between a good mathematical distance and a bad one. How to give beliefs a geometry is a rich subject in its own right; here the alternatives show why the financial purpose belongs in the choice of comparison.
+For the simplest transport distance, there is also a contingent payment whose expected value under Stress's forecast exceeds its expected value under Resilience's by exactly that distance. The second box constructs the payment and compares it with the logarithmic one. The choice is between specified financial questions, not between a good mathematical distance and a bad one. How to give beliefs a geometry is a rich subject in its own right; here the alternatives show why the financial purpose belongs in the choice of comparison.
 
 <details>
 <summary><strong>The mathematics:</strong> scoring rules and the logarithmic comparison</summary>
 
-**Forecasts, scores and units.** Let \(\mathcal Y\) be a finite set of possible outcomes. A forecast \(r\) assigns a strictly positive probability \(r(y)\) to each \(y\in\mathcal Y\), with \(\sum_y r(y)=1\). Write \(p\) for A's beliefs, \(q\) for B's, and \(Y\) for the outcome that will be observed. An expectation \(\mathbb E_p\) uses probabilities \(p\).
+**Forecasts, scores and units.** Let \(\mathcal Y\) be a finite set of possible outcomes. A forecast \(r\) assigns a strictly positive probability \(r(y)\) to each \(y\in\mathcal Y\), with \(\sum_y r(y)=1\). Write \(p\) for Stress's beliefs, \(q\) for Resilience's, and \(Y\) for the outcome that will be observed. An expectation \(\mathbb E_p\) uses probabilities \(p\).
 
 A *scoring rule* is a function \(S(r,y)\): it evaluates the report \(r\) when outcome \(y\) occurs, with larger values better. Its expected score under belief \(p\) is
 
@@ -110,7 +109,7 @@ $$
 D(p\|q)=\sum_y p(y)\log_2\frac{p(y)}{q(y)}.
 $$
 
-Throughout the article, \(D\), entropy \(H\) and mutual information \(I(S;Y)\) use base-two logarithms. Natural logarithms are always written \(\ln\). The signed payment to A is
+Throughout the article, \(D\), entropy \(H\) and mutual information \(I(S;Y)\) use base-two logarithms. Natural logarithms are always written \(\ln\). The signed payment to Stress is
 
 $$
 X(y)=c\,[S(p,y)-S(q,y)]
@@ -163,7 +162,7 @@ $$
 
 Its regret is \(\tfrac12\sum_z(p(z)-r(z))^2\). It is strictly proper and bounded. For two outcomes it reduces to \(-[1-r(y)]^2\), which is also local; with three or more it generally depends on the other entries of the report as well.
 
-**2. A budget for logarithmic growth.** B offers every non-negative payout multiple \(m(y)\) satisfying \(\mathbb E_q[m(Y)]\le1\). A chooses among them to maximise \(\mathbb E_p[\log_2 m(Y)]\), interpreting \(m\) as money returned per unit staked.
+**2. A budget for logarithmic growth.** Resilience offers every non-negative payout multiple \(m(y)\) satisfying \(\mathbb E_q[m(Y)]\le1\). Stress chooses among them to maximise \(\mathbb E_p[\log_2 m(Y)]\), interpreting \(m\) as money returned per unit staked.
 
 Write \(m(y)=[p(y)/q(y)]u(y)\). Then
 
@@ -177,14 +176,14 @@ $$
 \end{aligned}
 $$
 
-Equality is obtained by \(u(y)=1\), hence \(m(y)=p(y)/q(y)\). For the lenders this is \((1/2,1,2)\). Its expected payout under B is \(0.4/2+0.4+0.2\times2=1\), and its expected logarithmic return under A is 0.2 bits. In this finite positive setting,
+Equality is obtained by \(u(y)=1\), hence \(m(y)=p(y)/q(y)\). For the lenders this is \((1/2,1,2)\). Its expected payout under Resilience is \(0.4/2+0.4+0.2\times2=1\), and its expected logarithmic return under Stress is 0.2 bits. In this finite positive setting,
 
 $$
 D(p\|q)=\max_{m\ge0,\,\mathbb E_q[m]\le1}
 \mathbb E_p[\log_2 m].
 $$
 
-This is a form of the Donsker–Varadhan variational identity.[3] Expected money has a different optimum: the ratio schedule returns 1.3 units on average under A, whereas a feasible schedule paying five units only in the high band returns two units on average under A. The latter pays nothing elsewhere and therefore has expected logarithmic return minus infinity.
+This is a form of the Donsker–Varadhan variational identity.[3] Expected money has a different optimum: the ratio schedule returns 1.3 units on average under Stress, whereas a feasible schedule paying five units only in the high band returns two units on average under Stress. The latter pays nothing elsewhere and therefore has expected logarithmic return minus infinity.
 
 **3. Local geometry and evidence.** Fix a strictly positive forecast \(p\) and a vector \(h\) satisfying \(\sum_yh(y)=0\). Let \(q=p+\varepsilon h\), where \(\varepsilon\) is small enough that all entries remain positive. The Fisher quadratic form at \(p\) is
 
@@ -260,7 +259,7 @@ $$
 =\frac{h(y)^2}{p(y)}.
 $$
 
-Thus the local Fisher length is unchanged too. In the main example, \(\kappa=(1/2,1/2)\) inside the high band: A's 40% becomes 20% and 20%, while B's 20% becomes 10% and 10%. This is different from the later refinement in which the conditional forecasts are 50–50 and 90–10.
+Thus the local Fisher length is unchanged too. In the main example, \(\kappa=(1/2,1/2)\) inside the high band: Stress's 40% becomes 20% and 20%, while Resilience's 20% becomes 10% and 10%. This is different from the later refinement in which the conditional forecasts are 50–50 and 90–10.
 
 Čencov's theorem identifies Fisher's metric, up to one overall positive scale, among smooth families of Riemannian metrics defined consistently over all finite outcome sets and invariant under the specified recoverable refinements and relabellings.[4] (A Riemannian metric measures local lengths by a positive quadratic form, as \(g_p\) does.)
 
@@ -289,7 +288,7 @@ No independence assumption is used. Conversely, let \(h\) be a continuous real-v
 
 **Setting.** Take strictly positive forecasts \(p\) and \(q\) on the same finite set of outcomes \(\mathcal Y\). Let \(Y\) denote the observed outcome and \(\eta_y=p(y)/q(y)\) its likelihood ratio. In this box \(b>0\) is the number of euros paid per unit of the chosen comparison; to compare payment schedules, we take \(b=10{,}000\), as for the logarithmic contract.
 
-**Is a positive bargaining interval special to the logarithm?** Let A's payment be \(b\,g(\eta_Y)\), where \(g\) is any real-valued non-decreasing function. Then
+**Is a positive bargaining interval special to the logarithm?** Let Stress's payment be \(b\,g(\eta_Y)\), where \(g\) is any real-valued non-decreasing function. Then
 
 $$
 \begin{aligned}
@@ -301,7 +300,7 @@ $$
 
 The second equality uses \(\sum_yq(y)(\eta_y-1)=0\). In the final sum each pair of bracketed factors has the same sign. If \(p\ne q\) and \(g\) is strictly increasing, the gap is positive.
 
-Suppose both lenders value expected money alone, assess this claim in isolation and settle any fee on the same date as its payment. A's maximum acceptable fee to B is \(b\mathbb E_p[g]\); B's minimum is \(b\mathbb E_q[g]\). Their difference is the width of the interval in which both expect to benefit, so any strictly increasing \(g\) leaves room to trade when the forecasts differ.
+Suppose both lenders value expected money alone, assess this claim in isolation and settle any fee on the same date as its payment. Stress's maximum acceptable fee to Resilience is \(b\mathbb E_p[g]\); Resilience's minimum is \(b\mathbb E_q[g]\). Their difference is the width of the interval in which both expect to benefit, so any strictly increasing \(g\) leaves room to trade when the forecasts differ.
 
 **Convex generators.** A differentiable convex function \(\phi:(0,\infty)\to\mathbb R\) with \(\phi(1)=0\) defines an *f-divergence* by
 
@@ -319,15 +318,15 @@ $$
 
 which explains why many such divergences have the same Fisher geometry locally, up to scale. For example, \(\phi(t)=(\sqrt t-1)^2\) gives the squared Hellinger discrepancy \(\sum_y(\sqrt{p(y)}-\sqrt{q(y)})^2\). Its local form is also proportional to Fisher, although its global values differ from relative entropy.
 
-The choice \(\phi(t)=(t\ln t-t+1)/\ln2\) gives \(g(t)=\log_2 t\). The choice \(\phi(t)=(t-1)^2/2\) gives \(g(t)=t-1\). On the lenders' forecasts the second rule pays \((-0.5,0,1)\) units, compared with \((-1,0,1)\) for the base-two logarithm. Its expectation is zero under B and 0.3 units under A.
+The choice \(\phi(t)=(t\ln t-t+1)/\ln2\) gives \(g(t)=\log_2 t\). The choice \(\phi(t)=(t-1)^2/2\) gives \(g(t)=t-1\). On the lenders' forecasts the second rule pays \((-0.5,0,1)\) units, compared with \((-1,0,1)\) for the base-two logarithm. Its expectation is zero under Resilience and 0.3 units under Stress.
 
-A generator does not by itself supply honest reporting. If A reports \(r\) and receives \(b[r(Y)/q(Y)-1]\), its expectation under its actual belief \(p\) is
+A generator does not by itself supply honest reporting. If Stress reports \(r\) and receives \(b[r(Y)/q(Y)-1]\), its expectation under its actual belief \(p\) is
 
 $$
 b\left[\sum_y r(y)\frac{p(y)}{q(y)}-1\right].
 $$
 
-This increases as A moves its reported probability towards the outcome with the largest \(p(y)/q(y)\), here the high band, so honest reporting is not the optimum. The logarithmic rule adds the honesty and additivity properties derived in the first box.
+This increases as Stress moves its reported probability towards the outcome with the largest \(p(y)/q(y)\), here the high band, so honest reporting is not the optimum. The logarithmic rule adds the honesty and additivity properties derived in the first box.
 
 **A transport comparison.** Number the three categories 0, 1 and 2, in order from fewer than five defaults to ten or more. Specify a distance of one between neighbouring categories and two between the lowest and highest. In symbols, the distance is \(|i-j|\).
 
@@ -355,16 +354,16 @@ $$
 
 Here \(u\) assigns a numerical payment to each category and is allowed to change by no more than the assigned distance between categories. A maximising function \(u\), fixed before the outcome, gives a cash payment \(b\,u(Y)\) whose expected-money bargaining interval has width \(bW_1(p,q)\). Adding a constant to \(u\) shifts both reservation values equally without changing the width.
 
-For the three bands, the cumulative probabilities are \((0.2,0.6,1)\) under A and \((0.4,0.8,1)\) under B. Thus \(W_1=0.2+0.2=0.4\). One optimal schedule is \(u=(-1,0,1)\), giving expectations 0.2 under A and −0.2 under B. With the chosen coefficient \(b=10{,}000\), this happens to reproduce the original logarithmic payments and the €4,000 interval.
+For the three bands, the cumulative probabilities are \((0.2,0.6,1)\) under Stress and \((0.4,0.8,1)\) under Resilience. Thus \(W_1=0.2+0.2=0.4\). One optimal schedule is \(u=(-1,0,1)\), giving expectations 0.2 under Stress and −0.2 under Resilience. With the chosen coefficient \(b=10{,}000\), this happens to reproduce the original logarithmic payments and the €4,000 interval.
 
-Now consider the *informative* subdivision used later in the article: A gives 20% and 20% to ten-to-fourteen and fifteen-or-more defaults, whereas B gives 18% and 2%. Number all four resulting categories 0, 1, 2 and 3, again assigning distance one between neighbours. The calculation is
+Now consider the *informative* subdivision used later in the article: Stress gives 20% and 20% to ten-to-fourteen and fifteen-or-more defaults, whereas Resilience gives 18% and 2%. Number all four resulting categories 0, 1, 2 and 3, again assigning distance one between neighbours. The calculation is
 
 $$
 W_1=0.2+0.2+0.18=0.58,
 \qquad u=(-1,0,1,2).
 $$
 
-The transport payment has expectations 0.4 under A and −0.18 under B. With the same \(b\), the logarithmic schedule is instead approximately \((-1,0,0.152,3.322)\). It pays most in the last category because A assigned it 20% and B only 2%. The transport schedule rises by one unit between each neighbouring pair because, in this example, A assigns less cumulative probability than B at every boundary. Different cumulative comparisons can make an optimal schedule rise at some boundaries and fall at others.
+The transport payment has expectations 0.4 under Stress and −0.18 under Resilience. With the same \(b\), the logarithmic schedule is instead approximately \((-1,0,0.152,3.322)\). It pays most in the last category because Stress assigned it 20% and Resilience only 2%. The transport schedule rises by one unit between each neighbouring pair because, in this example, Stress assigns less cumulative probability than Resilience at every boundary. Different cumulative comparisons can make an optimal schedule rise at some boundaries and fall at others.
 
 Assigning the two high categories separate locations was part of this new transport specification. If both retained the old high category's location 2, their transport distance would remain 0.4. The change to 0.58 therefore comes from the chosen distances between the new categories as well as from the more detailed forecasts.
 
@@ -374,16 +373,16 @@ The two comparisons can serve different purposes. A lender wanting payment to in
 
 ## From a payment to a price
 
-Under A's forecast, A expects to receive €2,000 from this contract: a 40% chance of €10,000 against a 20% chance of paying €10,000. B assesses the opposite side under its own probabilities and also expects to gain €2,000. Each expects to profit because each uses its own probabilities; the contract itself is zero-sum, since whatever one lender receives the other pays.
+Under Stress's forecast, Stress expects to receive €2,000 from this contract: a 40% chance of €10,000 against a 20% chance of paying €10,000. Resilience assesses the opposite side under its own probabilities and also expects to gain €2,000. Each expects to profit because each uses its own probabilities; the contract itself is zero-sum, since whatever one lender receives the other pays.
 
-Suppose each lender cares only about expected money, looks at this contract on its own, and any fixed fee is paid on the same date as the comparison payment. A would pay B any fee below €2,000 to enter. B would accept any fee above minus €2,000: a negative fee means B pays A, and B would pay up to €2,000 for its side. Every fee strictly between those limits leaves both expecting to gain, before costs. Zero is one possible fee, and nothing in this calculation singles it out. An auction, a dealer or plain haggling has to produce the actual terms.
+Suppose each lender cares only about expected money, looks at this contract on its own, and any fixed fee is paid on the same date as the comparison payment. Stress would pay Resilience any fee below €2,000 to enter. Resilience would accept any fee above minus €2,000: a negative fee means Resilience pays Stress, and Resilience would pay up to €2,000 for its side. Every fee strictly between those limits leaves both expecting to gain, before costs. Zero is one possible fee, and nothing in this calculation singles it out. An auction, a dealer or plain haggling has to produce the actual terms.
 
-The interval is €4,000 wide, and the width has an informational interpretation. A's expected relative surprise is the *Kullback–Leibler divergence* of A's forecast from B's: the average of the logarithmic probability ratio, taken using A's probabilities. It is 0.2 bits here, worth €2,000 at €10,000 per bit. Reversing the forecasts gives B's expected relative surprise, also 0.2 bits in this example but generally a different number. The sum of the two divergences is called the *Jeffreys divergence*. Multiplying it by €10,000 per bit gives the width of the bargaining interval.[3]
+The interval is €4,000 wide, and the width has an informational interpretation. Stress's expected relative surprise is the *Kullback–Leibler divergence* of Stress's forecast from Resilience's: the average of the logarithmic probability ratio, taken using Stress's probabilities. It is 0.2 bits here, worth €2,000 at €10,000 per bit. Reversing the forecasts gives Resilience's expected relative surprise, also 0.2 bits in this example but generally a different number. The sum of the two divergences is called the *Jeffreys divergence*. Multiplying it by €10,000 per bit gives the width of the bargaining interval.[3]
 
 <details>
 <summary><strong>The mathematics:</strong> expected gains and the bargaining interval</summary>
 
-Take strictly positive probabilities \(p(y)\) and \(q(y)\) on a finite set of outcomes \(y\). They are A's and B's forecasts. Write \(D(p\|q)=\sum_y p(y)\log_2[p(y)/q(y)]\), in bits, and \(c=10{,}000\) euros per bit. The signed payment to A is \(X(y)=c\log_2[p(y)/q(y)]\), with B receiving \(-X(y)\).
+Take strictly positive probabilities \(p(y)\) and \(q(y)\) on a finite set of outcomes \(y\). They are Stress's and Resilience's forecasts. Write \(D(p\|q)=\sum_y p(y)\log_2[p(y)/q(y)]\), in bits, and \(c=10{,}000\) euros per bit. The signed payment to Stress is \(X(y)=c\log_2[p(y)/q(y)]\), with Resilience receiving \(-X(y)\).
 
 Their expected own-side payments, each evaluated under its own forecast, are
 
@@ -392,7 +391,7 @@ $$
 \mathbb E_q[-X(Y)]=cD(q\|p).
 $$
 
-Both are non-negative by Gibbs' inequality and positive when the forecasts differ. For A in the example,
+Both are non-negative by Gibbs' inequality and positive when the forecasts differ. For Stress in the example,
 
 $$
 \begin{aligned}
@@ -406,7 +405,7 @@ $$
 
 By the symmetry of these particular forecasts, \(D(q\|p)=0.2\) bits too.
 
-Let \(f\) be a fixed fee from A to B, paid on the same date as \(X\). Under expected-money valuation, with this claim assessed in isolation and before costs, A strictly prefers the trade when \(cD(p\|q)-f>0\). B strictly prefers it when \(f+cD(q\|p)>0\). Thus both prefer trade exactly when
+Let \(f\) be a fixed fee from Stress to Resilience, paid on the same date as \(X\). Under expected-money valuation, with this claim assessed in isolation and before costs, Stress strictly prefers the trade when \(cD(p\|q)-f>0\). Resilience strictly prefers it when \(f+cD(q\|p)>0\). Thus both prefer trade exactly when
 
 $$
 -cD(q\|p)<f<cD(p\|q).
@@ -418,7 +417,7 @@ At either endpoint one side is indifferent. The interval in the example runs fro
 
 Each limit is a *reservation value*: the fee at which that lender would be indifferent between entering the trade and declining it. An actual institution's limits can differ from the €2,000 figures. A lender already heavily exposed to utility failures may value the high-band payment as protection and pay more for it. It may also be unable to deposit the collateral securing its own payment, or lack permission under its mandate to hold the contract at all. Calculating an interval is not evidence that orders already exist within it.
 
-The payment is also protection. If A's loan book loses heavily when defaults are high, the contract offsets part of that loss in exchange for paying out when defaults are low, and it does so while the two lenders go on disagreeing about the transition.
+The payment is also protection. If Stress's loan book loses heavily when defaults are high, the contract offsets part of that loss in exchange for paying out when defaults are low, and it does so while the two lenders go on disagreeing about the transition.
 
 A classic result explains why learning that somebody wants to trade can itself change the calculation. Milgrom and Stokey consider traders whose starting allocation is already efficient: judged by their prior beliefs, no trade could benefit one of them without harming another. The traders agree on how new signals relate to the payoff-relevant outcome. If it then becomes common knowledge that a feasible trade is acceptable to all—each knows this, knows that the others know it, and so on—every trader is indifferent to that trade; with strict risk aversion, the trade is zero.[5] In our expected-money example, both lenders prefer a suitable bet before any new private information arrives. Their starting position therefore does not meet the theorem's efficiency condition. Real demand could also come from hedging needs, mandates and existing exposures.
 
@@ -434,9 +433,9 @@ Could publishing the forecasts do the same job? Publication allows scrutiny but 
 
 ## The liability limit changes the comparison
 
-Our example has a reassuring feature: no payment can exceed €10,000 in either direction. That comes from the forecasts, not from the rule. With finer outcomes, probability ratios can become enormous. If A gives some outcome a 10% chance and B gives it one in a million, the payment if it happens is about €166,000. If one side gives an outcome zero probability and the other gives it positive probability, the raw log payment is infinite.
+Our example has a reassuring feature: no payment can exceed €10,000 in either direction. That comes from the forecasts, not from the rule. With finer outcomes, probability ratios can become enormous. If Stress gives some outcome a 10% chance and Resilience gives it one in a million, the payment if it happens is about €166,000. If one side gives an outcome zero probability and the other gives it positive probability, the raw log payment is infinite.
 
-The expected-payout limit in the stake example does not prevent this. It restricts an average under B's forecast, not the largest amount B could owe. The terms must address that liability separately: restrict the permitted probability ratios, specify a maximum payment and secure it with collateral, or change the payment rule. A symmetric cap, for example, replaces a payment larger than €20,000 with €20,000 and a payment below −€20,000 with −€20,000. Capping the payment can destroy honest reporting. In the four-category example in the next section, a cap of €20,000 in either direction allows A to raise its expected payment from about €2,300 to about €4,000 by reporting probabilities different from its actual beliefs.
+The expected-payout limit in the stake example does not prevent this. It restricts an average under Resilience's forecast, not the largest amount Resilience could owe. The terms must address that liability separately: restrict the permitted probability ratios, specify a maximum payment and secure it with collateral, or change the payment rule. A symmetric cap, for example, replaces a payment larger than €20,000 with €20,000 and a payment below −€20,000 with −€20,000. Capping the payment can destroy honest reporting. In the four-category example in the next section, a cap of €20,000 in either direction allows Stress to raise its expected payment from about €2,300 to about €4,000 by reporting probabilities different from its actual beliefs.
 
 One alternative keeps the logarithmic rule but sets a minimum probability that either lender may give any outcome. If that minimum is one in a thousand, which requires at most a thousand possible outcomes, no payment can exceed about €99,700 in either direction, and honest reporting remains optimal for any belief that respects the minimum. Another route is a bounded proper rule such as the *Brier score*, which penalises the squared differences between the reported probabilities and the outcome (one for what happened, zero for everything else). It gives a firm liability limit, at the price of the links to evidence and information that the logarithm provides.[2]
 
@@ -446,26 +445,26 @@ A lender might instead want larger payments on very high default counts. Simply 
 
 ## What settlement leaves unresolved
 
-Suppose for a moment that the lenders agreed on the probability of each band but disagreed about which utilities would fail. The three-band contract would pay nothing in every outcome: the probabilities entering the payment would be identical. Yet the disagreement could matter greatly to a lender whose loans were concentrated in the borrowers A considered vulnerable.
+Suppose for a moment that the lenders agreed on the probability of each band but disagreed about which utilities would fail. The three-band contract would pay nothing in every outcome: the probabilities entering the payment would be identical. Yet the disagreement could matter greatly to a lender whose loans were concentrated in the borrowers Stress considered vulnerable.
 
-Return to the original probabilities and consider a more detailed default count. Divide the high band into ten to fourteen defaults and fifteen or more, as before, but now let the lenders disagree about that detail. A still assigns 40% to the high band, divided equally into 20% and 20%. B assigns 20% in total, divided into 18% and 2%. Thus, conditional on reaching ten defaults, A considers the two new categories equally likely, whereas B gives nine tenths of its high-band probability to ten-to-fourteen and only one tenth to fifteen-or-more. This is different from the earlier subdivision on which they agreed.
+Return to the original probabilities and consider a more detailed default count. Divide the high band into ten to fourteen defaults and fifteen or more, as before, but now let the lenders disagree about that detail. Stress still assigns 40% to the high band, divided equally into 20% and 20%. Resilience assigns 20% in total, divided into 18% and 2%. Thus, conditional on reaching ten defaults, Stress considers the two new categories equally likely, whereas Resilience gives nine tenths of its high-band probability to ten-to-fourteen and only one tenth to fifteen-or-more. This is different from the earlier subdivision on which they agreed.
 
-The original three-band contract is unchanged, because it still uses only the total probabilities of the high band. A contract using the finer record raises A's expected payment from €2,000 to about €4,950. The additional €2,950 reflects their different conditional predictions within the high band. The three-band contract cannot pay for that difference: once defaults reach ten, it pays the same amount whatever the count. The split is exact: A's expected payment on the detailed record equals the part the three-band record captures plus the expected disagreement left inside the bands, both computed with A's probabilities.[3]
+The original three-band contract is unchanged, because it still uses only the total probabilities of the high band. A contract using the finer record raises Stress's expected payment from €2,000 to about €4,950. The additional €2,950 reflects their different conditional predictions within the high band. The three-band contract cannot pay for that difference: once defaults reach ten, it pays the same amount whatever the count. The split is exact: Stress's expected payment on the detailed record equals the part the three-band record captures plus the expected disagreement left inside the bands, both computed with Stress's probabilities.[3]
 
-The finer comparison also increases the largest possible payment in this example. If fifteen or more utilities fail, A assigned that outcome ten times B's probability, and B owes about €33,200 instead of €10,000. In general, refining the record can raise either side's largest possible payment but never lower it: the ratio on a coarse band is an average of the ratios on its finer parts, so at least one finer ratio is at least as extreme. A richer record can improve the comparison while making the liability harder to fund.
+The finer comparison also increases the largest possible payment in this example. If fifteen or more utilities fail, Stress assigned that outcome ten times Resilience's probability, and Resilience owes about €33,200 instead of €10,000. In general, refining the record can raise either side's largest possible payment but never lower it: the ratio on a coarse band is an average of the ratios on its finer parts, so at least one finer ratio is at least as extreme. A richer record can improve the comparison while making the liability harder to fund.
 
 The disagreement omitted by the settlement record is different from the representational residue of Part I. That residue concerned choices left open while *building* a forecast, such as which outcomes to distinguish or which similarities to rely on. Here the forecasts are already specified, and we are asking what their probabilities imply for one particular observation. Even a complete record of defaults can leave their causes unresolved, including the role of policy and what would have happened under another financing decision.
 
-The contract also gives A a way to assess a possible source of information. Suppose A can receive an early report on refinancing conditions before fixing its forecast, while B's forecast and the other terms stay fixed. A can use its own model to compare the expected payment with and without that report. Averaged over the reports and default outcomes A considers possible, the improvement equals the report's *mutual information* with the default band, multiplied by €10,000 per bit. Mutual information is the average reduction in uncertainty about the band after observing the report.[3]
+The contract also gives Stress a way to assess a possible source of information. Suppose Stress can receive an early report on refinancing conditions before fixing its forecast, while Resilience's forecast and the other terms stay fixed. Stress can use its own model to compare the expected payment with and without that report. Averaged over the reports and default outcomes Stress considers possible, the improvement equals the report's *mutual information* with the default band, multiplied by €10,000 per bit. Mutual information is the average reduction in uncertainty about the band after observing the report.[3]
 
 This values information for the specified contract. Blackwell's comparison of experiments asks a broader question: would one information source be at least as useful in every decision problem? In the finite setting, this holds when the second source can be reproduced from the first by a random transformation of the observed message, using the same transformation regardless of the unknown state. The transformation can discard or obscure information but cannot consult the state itself. This is called a *garbling*. A larger mutual-information value for one particular model and question does not establish that stronger ordering.[7]
 
 <details>
 <summary><strong>The mathematics:</strong> what settlement records and what a signal adds</summary>
 
-**Notation and the decomposition.** Let \(Z\) be a detailed outcome on a finite set, and let \(Y=g(Z)\) be the coarser category used for settlement. In the example \(Z\) has four default bands and \(Y\) combines the two high bands into one. A and B specify strictly positive laws \(p_Z\) and \(q_Z\). Their induced probabilities of \(Y\) are \(p_Y\) and \(q_Y\). Write \(D(P\|Q)=\sum_z P(z)\log_2[P(z)/Q(z)]\), in bits, and \(c=10{,}000\) euros per bit.
+**Notation and the decomposition.** Let \(Z\) be a detailed outcome on a finite set, and let \(Y=g(Z)\) be the coarser category used for settlement. In the example \(Z\) has four default bands and \(Y\) combines the two high bands into one. Stress and Resilience specify strictly positive laws \(p_Z\) and \(q_Z\). Their induced probabilities of \(Y\) are \(p_Y\) and \(q_Y\). Write \(D(P\|Q)=\sum_z P(z)\log_2[P(z)/Q(z)]\), in bits, and \(c=10{,}000\) euros per bit.
 
-For \(y=g(z)\), factor \(p_Z(z)=p_Y(y)p(z\mid y)\), and similarly for \(q\). Taking the logarithmic ratio and averaging under A gives
+For \(y=g(z)\), factor \(p_Z(z)=p_Y(y)p(z\mid y)\), and similarly for \(q\). Taking the logarithmic ratio and averaging under Stress gives
 
 $$
 D(p_Z\|q_Z)
@@ -475,7 +474,7 @@ $$
 
 The first term is the expected comparison available to a contract on \(Y\). The second is the expected additional comparison available if \(Z\) is recorded too. Both are non-negative.
 
-**The example.** Within the high band A gives conditional probabilities \((0.5,0.5)\) to ten-to-fourteen and fifteen-or-more defaults; B gives \((0.9,0.1)\). Their conditional divergence from A's perspective is
+**The example.** Within the high band Stress gives conditional probabilities \((0.5,0.5)\) to ten-to-fourteen and fifteen-or-more defaults; Resilience gives \((0.9,0.1)\). Their conditional divergence from Stress's perspective is
 
 $$
 0.5\log_2\frac{0.5}{0.9}
@@ -483,9 +482,9 @@ $$
 \simeq-0.424+1.161=0.737\text{ bits}.
 $$
 
-A reaches the high band with probability 0.4, so its expected additional comparison is \(0.4\times0.737\simeq0.295\) bits. Adding the original 0.2 gives about 0.495 bits: €2,000 from the coarse contract and about €2,950 more from the refinement. Evaluating the reversed comparison under B gives €2,000 plus about €1,060. The last category has signed payment \(c\log_2(0.2/0.02)\simeq3.322c\), or about €33,200.
+Stress reaches the high band with probability 0.4, so its expected additional comparison is \(0.4\times0.737\simeq0.295\) bits. Adding the original 0.2 gives about 0.495 bits: €2,000 from the coarse contract and about €2,950 more from the refinement. Evaluating the reversed comparison under Resilience gives €2,000 plus about €1,060. The last category has signed payment \(c\log_2(0.2/0.02)\simeq3.322c\), or about €33,200.
 
-**A signal received before reporting.** Let \(S\) be a finite-valued signal with possible values \(s\), and let A specify a joint law \(p_{S,Y}\). Before receiving it, A forecasts \(p_Y(y)\); after receiving \(s\), A can report \(p(y\mid s)\). Assume positive conditional probabilities, keep B's forecast \(q_Y\) and all payment terms fixed, and average under A's joint law. Then
+**A signal received before reporting.** Let \(S\) be a finite-valued signal with possible values \(s\), and let Stress specify a joint law \(p_{S,Y}\). Before receiving it, Stress forecasts \(p_Y(y)\); after receiving \(s\), Stress can report \(p(y\mid s)\). Assume positive conditional probabilities, keep Resilience's forecast \(q_Y\) and all payment terms fixed, and average under Stress's joint law. Then
 
 $$
 \begin{aligned}
@@ -502,7 +501,7 @@ $$
 I(S;Y)=\sum_{s,y}p(s,y)\log_2\frac{p(s,y)}{p_S(s)p_Y(y)}.
 $$
 
-It is the relative entropy between A's joint law and the law making the signal and outcome independent while retaining their marginal probabilities. Equivalently,
+It is the relative entropy between Stress's joint law and the law making the signal and outcome independent while retaining their marginal probabilities. Equivalently,
 
 $$
 \begin{aligned}
@@ -512,7 +511,7 @@ I(S;Y)&=H(Y)-H(Y\mid S).
 \end{aligned}
 $$
 
-Since \(H(Y\mid S)\ge0\), the expected-payoff improvement \(cI(S;Y)\) cannot exceed \(cH(Y)\). A's probabilities \((0.2,0.4,0.4)\) give \(H(Y)\simeq1.52\) bits, so no signal can raise A's expected payment by more than about €15,200.
+Since \(H(Y\mid S)\ge0\), the expected-payoff improvement \(cI(S;Y)\) cannot exceed \(cH(Y)\). Stress's probabilities \((0.2,0.4,0.4)\) give \(H(Y)\simeq1.52\) bits, so no signal can raise Stress's expected payment by more than about €15,200.
 
 </details>
 
@@ -581,22 +580,22 @@ Quotes at several maturities could also be used to estimate how quickly particip
 
 A five-year contract gives one five-year observation. Marking it to market every day does not turn it into thousands of independent tests. Learning faster requires genuinely new observations, with the forecasts committed before each one arrives.
 
-There is a rigorous way to turn sequential forecast comparisons into an evidence record. Return to the bet that pays a non-negative multiple of its stake, rather than the signed contract in the table. Start an account with one euro. Before each observation, choose a bet whose expected payout under B's forecast, given the record so far, is no greater than the account balance being staked. Reinvest the payout, add no outside money, and never allow a negative balance. Under B's model, the expected next balance is then at most the present balance. A sufficiently large increase can be evidence against that model.[9]
+There is a rigorous way to turn sequential forecast comparisons into an evidence record. Return to the bet that pays a non-negative multiple of its stake, rather than the signed contract in the table. Start an account with one euro. Before each observation, choose a bet whose expected payout under Resilience's forecast, given the record so far, is no greater than the account balance being staked. Reinvest the payout, add no outside money, and never allow a negative balance. Under Resilience's model, the expected next balance is then at most the present balance. A sufficiently large increase can be evidence against that model.[9]
 
-Ville's inequality bounds how often this procedure could produce a misleadingly large balance. If B's model generates the observations, the probability that the account ever reaches €100 is at most one in a hundred. The bound already includes the possibility of checking after every observation and stopping when that balance is reached. It is not a 99% posterior probability that B is wrong. Independent observations are unnecessary: the forecast for each new observation must condition on the available past, and the bet must satisfy the expected-payout restriction under that conditional forecast. This allows, for example, a forecast of this year's defaults to depend on last year's economy.[9]
+Ville's inequality bounds how often this procedure could produce a misleadingly large balance. If Resilience's model generates the observations, the probability that the account ever reaches €100 is at most one in a hundred. The bound already includes the possibility of checking after every observation and stopping when that balance is reached. It is not a 99% posterior probability that Resilience is wrong. Independent observations are unnecessary: the forecast for each new observation must condition on the available past, and the bet must satisfy the expected-payout restriction under that conditional forecast. This allows, for example, a forecast of this year's defaults to depend on last year's economy.[9]
 
 The bookkeeping is part of the result. Forecasts must come before outcomes, and the rules deciding which contracts count must come before the results. Losses stay in the account. Restarting after a bad year, or publishing only the contracts that went well, changes what is being tested. A proprietary method can choose the bets, but an auditor has to be able to check that the complete account followed the declared rules. A profitable trading book built with arbitrary prices and leverage is not an account of this kind, however good its returns.
 
-How long would this take for our lenders? Imagine a fresh, statistically identical cohort at each five-year renewal, with the same forecasts and independent results. This is a deliberately simple, stationary experiment. The evidence account is a separate, notional ledger that reinvests its balance: with likelihood-ratio bets, each high-band outcome doubles it and each low-band outcome halves it, while the signed contract simply pays €10,000 one way or the other. The account first exceeds €100 when A's cumulative comparison payments reach €70,000. Under A's forecast, that takes 35 renewals on average: 175 years. The median is 29 renewals, and in about one case in nine it takes more than 60, or over three centuries. Under B's forecast, the chance of ever crossing is 1 in 128.
+How long would this take for our lenders? Imagine a fresh, statistically identical cohort at each five-year renewal, with the same forecasts and independent results. This is a deliberately simple, stationary experiment. The evidence account is a separate, notional ledger that reinvests its balance: with likelihood-ratio bets, each high-band outcome doubles it and each low-band outcome halves it, while the signed contract simply pays €10,000 one way or the other. The account first exceeds €100 when Stress's cumulative comparison payments reach €70,000. Under Stress's forecast, that takes 35 renewals on average: 175 years. The median is 29 renewals, and in about one case in nine it takes more than 60, or over three centuries. Under Resilience's forecast, the chance of ever crossing is 1 in 128.
 
-The 175 years is the expected wait for one evidence threshold in a sparse experiment. The contract itself pays after five years, and its protection can affect A's decisions from the day the terms are agreed. Each observation contributes 0.2 bits of evidence on average under A, the same 0.2 bits that set A's expected payment. Raising the monetary unit enlarges the transfers; it does nothing to speed up the evidence.
+The 175 years is the expected wait for one evidence threshold in a sparse experiment. The contract itself pays after five years, and its protection can affect Stress's decisions from the day the terms are agreed. Each observation contributes 0.2 bits of evidence on average under Stress, the same 0.2 bits that set Stress's expected payment. Raising the monetary unit enlarges the transfers; it does nothing to speed up the evidence.
 
-A well-kept account can produce strong evidence against B's forecast on the observations used for settlement. It cannot, however, tell apart explanations that give those observations the same probabilities. The rate at which genuinely informative observations arrive remains part of the investment problem.
+A well-kept account can produce strong evidence against Resilience's forecast on the observations used for settlement. It cannot, however, tell apart explanations that give those observations the same probabilities. The rate at which genuinely informative observations arrive remains part of the investment problem.
 
 <details>
 <summary><strong>The mathematics:</strong> Ville's inequality and the 175 years</summary>
 
-**The account.** Measure the account balance in units of its initial one-euro stake and put \(K_0=1\). Before observation \(t\), let \(q_t(y)\) be B's conditional probability of outcome \(y\), given everything observed so far. Choose non-negative multiples \(m_t(y)\), using only that past information, with \(\sum_y q_t(y)m_t(y)\le1\). After observing \(y_t\), set \(K_t=K_{t-1}m_t(y_t)\). Under the law \(Q\) specified by B's conditional forecasts,
+**The account.** Measure the account balance in units of its initial one-euro stake and put \(K_0=1\). Before observation \(t\), let \(q_t(y)\) be Resilience's conditional probability of outcome \(y\), given everything observed so far. Choose non-negative multiples \(m_t(y)\), using only that past information, with \(\sum_y q_t(y)m_t(y)\le1\). After observing \(y_t\), set \(K_t=K_{t-1}m_t(y_t)\). Under the law \(Q\) specified by Resilience's conditional forecasts,
 
 $$
 \mathbb E_Q[K_t\mid\text{past}]\le K_{t-1}.
@@ -612,15 +611,15 @@ $$
 
 Proof. Let \(\tau\) be the first time the account reaches \(1/\alpha\), and fix a horizon \(n\). Stopping at the earlier of \(\tau\) and \(n\) cannot raise the expected balance above its starting value of 1 (the optional stopping theorem), and on the event \(\tau \le n\) the balance is at least \(1/\alpha\). So \(\Pr(\tau \le n)/\alpha \le 1\) for every \(n\), and letting \(n\) grow gives the result. With \(\alpha = 1/100\), the account reaches €100 with probability at most 1%.
 
-**The lenders.** For independent renewals with fixed forecasts \(p=(0.2,0.4,0.4)\) and \(q=(0.4,0.4,0.2)\), use \(m(y)=p(y)/q(y)\). Let \(c=10{,}000\) euros per bit and let \(L_n\) be the cumulative signed comparison payment to A through \(n\) renewals. Then \(L_n=c\log_2K_n\). Each renewal adds −1, 0 or +1 to \(\log_2K_n\). The account crosses 100 when \(\log_2K_n\ge\log_2 100\simeq6.64\). Its logarithm is an integer in this example, so the first crossing is at seven bits, a balance of 128 times the initial stake and a net signed payment of €70,000.
+**The lenders.** For independent renewals with fixed forecasts \(p=(0.2,0.4,0.4)\) and \(q=(0.4,0.4,0.2)\), use \(m(y)=p(y)/q(y)\). Let \(c=10{,}000\) euros per bit and let \(L_n\) be the cumulative signed comparison payment to Stress through \(n\) renewals. Then \(L_n=c\log_2K_n\). Each renewal adds −1, 0 or +1 to \(\log_2K_n\). The account crosses 100 when \(\log_2K_n\ge\log_2 100\simeq6.64\). Its logarithm is an integer in this example, so the first crossing is at seven bits, a balance of 128 times the initial stake and a net signed payment of €70,000.
 
-Under A's law \(P\), the increments −1, 0, +1 have probabilities 0.2, 0.4, 0.4 and mean 0.2. Let \(S_n=\log_2K_n\), and let \(T\) be its first hitting time of seven. To apply Wald's identity at this possibly unbounded time, first show that \(\mathbb E_P[T]\) is finite. The event \(T>n\) implies \(S_n<7\). For \(n\ge70\), bounded independent increments give the Hoeffding bound \(\Pr_P(T>n)\le e^{-n/200}\). Summing these tail bounds establishes finite expectation. Since the walk reaches exactly seven at \(T\), Wald's identity now gives
+Under Stress's law \(P\), the increments −1, 0, +1 have probabilities 0.2, 0.4, 0.4 and mean 0.2. Let \(S_n=\log_2K_n\), and let \(T\) be its first hitting time of seven. To apply Wald's identity at this possibly unbounded time, first show that \(\mathbb E_P[T]\) is finite. The event \(T>n\) implies \(S_n<7\). For \(n\ge70\), bounded independent increments give the Hoeffding bound \(\Pr_P(T>n)\le e^{-n/200}\). Summing these tail bounds establishes finite expectation. Since the walk reaches exactly seven at \(T\), Wald's identity now gives
 
 $$
 7=0.2\,\mathbb E[T],\qquad \mathbb E[T]=35.
 $$
 
-The median and tail probability can also be obtained without simulation. Under A's law, let \(v_n(j)\) be the probability of being at \(j<7\) after \(n\) renewals without having reached seven. Start with \(v_0(0)=1\), use
+The median and tail probability can also be obtained without simulation. Under Stress's law, let \(v_n(j)\) be the probability of being at \(j<7\) after \(n\) renewals without having reached seven. Start with \(v_0(0)=1\), use
 
 $$
 v_{n+1}(j)=0.2v_n(j+1)+0.4v_n(j)+0.4v_n(j-1),\quad j<7,
@@ -628,7 +627,7 @@ $$
 
 and discard mass absorbed at seven. Then \(\Pr(T>n)=\sum_{j<7}v_n(j)\). This deterministic recursion gives median 29 and \(\Pr(T>60)=0.11329248\).
 
-Under B's law, the increments −1, 0, +1 have probabilities 0.4, 0.4, 0.2. Ignoring the zero increments leaves an upward probability of one third and a downward probability of two thirds. The probability that this downward-drifting walk ever reaches seven is \([(1/3)/(2/3)]^7=1/128\), about 0.78%, consistent with Ville's upper bound of 1%.
+Under Resilience's law, the increments −1, 0, +1 have probabilities 0.4, 0.4, 0.2. Ignoring the zero increments leaves an upward probability of one third and a downward probability of two thirds. The probability that this downward-drifting walk ever reaches seven is \([(1/3)/(2/3)]^7=1/128\), about 0.78%, consistent with Ville's upper bound of 1%.
 
 </details>
 
@@ -646,7 +645,7 @@ There are two questions. Could a rule given the *complete infinite history* iden
 
 **No error-free identification, an infinite expected net total on at least one side.** The statistical conclusion is the same, and the net total along almost every history is still finite. But rare, very large transfers make at least one lender's expected net total infinite. This concerns undiscounted payments. In the box's example, ordinary geometric discounting makes the expected discounted payments finite.
 
-**Identification in the infinite-history limit.** Here the complete history does admit a rule that identifies the generating model with probability one under either law. As observations accumulate, the logarithmic comparison tends to plus infinity under A's law and minus infinity under B's. The lenders' unchanged forecasts, repeated independently, give this case. All three cases assume that one of the two forecasts is the true law.
+**Identification in the infinite-history limit.** Here the complete history does admit a rule that identifies the generating model with probability one under either law. As observations accumulate, the logarithmic comparison tends to plus infinity under Stress's law and minus infinity under Resilience's. The lenders' unchanged forecasts, repeated independently, give this case. All three cases assume that one of the two forecasts is the true law.
 
 The first two cases still allow strong evidence at an error rate chosen in advance; what they rule out is certainty. And even in the third case, nothing guarantees a verdict by any given date: every finite run of results remains possible under both forecasts. Our two parties did not need one. They agreed a five-year payment and can decide whether to renew it when the time comes.
 
@@ -655,7 +654,7 @@ The first two cases still allow strong evidence at an error rate chosen in advan
 <details>
 <summary><strong>The mathematics:</strong> infinite histories and expected net payments</summary>
 
-**Setup.** At renewal \(k\), let \(p_k\) and \(q_k\) be A's and B's strictly positive probability vectors on a finite outcome set. All these vectors are specified before any results are observed. Renewals are independent under both models, so the laws of the complete history are the product measures \(P=\bigotimes_{k\ge1}p_k\) and \(Q=\bigotimes_{k\ge1}q_k\). Adaptive conditional forecasts need not produce product laws; the preceding supermartingale argument allows such adaptation, whereas the product theorem here does not automatically extend to it.
+**Setup.** At renewal \(k\), let \(p_k\) and \(q_k\) be Stress's and Resilience's strictly positive probability vectors on a finite outcome set. All these vectors are specified before any results are observed. Renewals are independent under both models, so the laws of the complete history are the product measures \(P=\bigotimes_{k\ge1}p_k\) and \(Q=\bigotimes_{k\ge1}q_k\). Adaptive conditional forecasts need not produce product laws; the preceding supermartingale argument allows such adaptation, whereas the product theorem here does not automatically extend to it.
 
 For outcomes \(Y_1,\ldots,Y_n\), define the likelihood ratio and cumulative signed payment
 
@@ -689,11 +688,11 @@ $$
 \simeq0.966<1.
 $$
 
-Thus \(\rho^n\to0\), and their product laws are singular. The likelihood-ratio account grows without bound almost surely under A's model and tends to zero almost surely under B's.
+Thus \(\rho^n\to0\), and their product laws are singular. The likelihood-ratio account grows without bound almost surely under Stress's model and tends to zero almost surely under Resilience's.
 
 **Decreasing differences and finite expected totals.** Fix a strictly positive vector \(p\) and a nonzero vector \(h\) whose coordinates sum to zero. Assume \(p(y)+h(y)>0\) for each outcome, and set \(p_k=p\), \(q_k=p+h/k\). Each forecast is then strictly positive. Taylor expansion gives \(1-\rho_k\), \(D(p_k\|q_k)\) and \(D(q_k\|p_k)\) of order \(1/k^2\). The series are finite: the complete-history laws are equivalent and both expected net totals are finite.
 
-**Equivalent histories with an infinite undiscounted expectation.** For \(k\ge1\), give each renewal a rare event and its complement. A assigns the rare event probability \(a_k=1/(k+1)^2\), while B assigns \(b_k=a_ke^{-k}\). Thus \(p_k=(a_k,1-a_k)\) and \(q_k=(b_k,1-b_k)\). Their entries are positive and \(1-\rho_k\) is of order \(1/k^2\), so the history laws are equivalent. However,
+**Equivalent histories with an infinite undiscounted expectation.** For \(k\ge1\), give each renewal a rare event and its complement. Stress assigns the rare event probability \(a_k=1/(k+1)^2\), while Resilience assigns \(b_k=a_ke^{-k}\). Thus \(p_k=(a_k,1-a_k)\) and \(q_k=(b_k,1-b_k)\). Their entries are positive and \(1-\rho_k\) is of order \(1/k^2\), so the history laws are equivalent. However,
 
 $$
 \begin{aligned}
@@ -704,7 +703,7 @@ D(p_k\|q_k)
 \end{aligned}
 $$
 
-The leading term is of order \(1/k\), whose sum diverges. Under A, only finitely many rare events occur almost surely because \(\sum_k a_k<\infty\); the same is true under B. Each realised rare-event payment is finite, and the common-outcome payments have a summable magnitude of order \(1/k^2\). The net total is therefore finite almost surely, even though A assigns it an infinite expectation.
+The leading term is of order \(1/k\), whose sum diverges. Under Stress, only finitely many rare events occur almost surely because \(\sum_k a_k<\infty\); the same is true under Resilience. Each realised rare-event payment is finite, and the common-outcome payments have a summable magnitude of order \(1/k^2\). The net total is therefore finite almost surely, even though Stress assigns it an infinite expectation.
 
 **The separate expectation question.** At each finite horizon,
 
@@ -715,7 +714,7 @@ $$
 
 Finite total Jeffreys divergence, the sum of both directional series, implies equivalent histories and finite own-side expectations of the terminal net amount. Equivalence alone does not imply finite expectations, as the rare-event example shows.
 
-In that example, discounting renewal \(k\)'s payment by \(\beta^k\), for \(0<\beta<1\), makes the expected absolute discounted payments under A of order \(\beta^k/k\), a summable series. An infinite undiscounted expectation therefore does not imply an infinite present value.
+In that example, discounting renewal \(k\)'s payment by \(\beta^k\), for \(0<\beta<1\), makes the expected absolute discounted payments under Stress of order \(\beta^k/k\), a summable series. An infinite undiscounted expectation therefore does not imply an infinite present value.
 
 </details>
 
@@ -747,9 +746,9 @@ Adoption could proceed in stages: internal diagnostics first, then bilateral con
 
 ## What has actually been settled?
 
-Five years on, eleven of the hundred utilities have defaulted. Under the original three-band contract, B pays A €10,000.
+Five years on, eleven of the hundred utilities have defaulted. Under the original three-band contract, Resilience pays Stress €10,000.
 
-B still attributes most of the failures to interest rates rather than the industrial transition. The payment need not persuade B otherwise: both lenders had allowed for the high-default outcome, and their agreement was about how their different forecasts would be compared. What matters now is that the obligation has been honoured. A received money in the outcome to which it had assigned more weight, on terms that B was willing to accept before either knew the result.
+Resilience still attributes most of the failures to interest rates rather than the industrial transition. The payment need not persuade Resilience otherwise: both lenders had allowed for the high-default outcome, and their agreement was about how their different forecasts would be compared. What matters now is that the obligation has been honoured. Stress received money in the outcome to which it had assigned more weight, on terms that Resilience was willing to accept before either knew the result.
 
 To judge the value of that arrangement, however, we should return to the day it was signed. A lender exposed to utility failures could use the high-band payment to offset part of its losses, accepting the cost of the opposite payment when defaults stayed low. At a suitable price and scale, that protection could change which loans it was prepared to keep or make. A counterparty with a different forecast or a different balance sheet could take the other side. Their disagreement would then help determine how the risk was carried, while research into the transition continued. The contract could be useful years before the evidence became conclusive.
 
@@ -757,43 +756,36 @@ The same construction makes the comparison itself available for scrutiny. Instea
 
 This is the constructive promise of contracts like this one: giving a financially consequential difference in understanding an exposure of its own, with terms that others can inspect and, where there is demand, trade. Whether a particular design earns its place depends on the decisions it improves and the protection it provides relative to the alternatives. The wider ambition is a financial system in which the work of understanding an uncertain future has more ways to affect the commitments made to it. Better understanding should be able to change what gets financed before it changes everybody's mind.
 
-## References and notes
+## References
 
-The utilities, default bands, probabilities and euro payments are constructed illustrations. The €10,000 unit uses base-two logarithms; another base changes only the monetary unit. The initial table and the conclusion use the original three-band contract with no fixed entry fee. Reservation-value comparisons settle all amounts on the same date, before costs, and assume expected-money maximisation for the isolated claim. The renewal figures use independent five-year observations of fresh statistically identical cohorts with unchanged forecasts; the mean of 35 renewals is exact, and an exact probability recursion gives the median and the one-in-nine tail.
+[1] Henri Poincaré, *Science and Hypothesis*, translated by W. J. Greenstreet (Walter Scott Publishing, 1905), Chapter III, p. 50.
 
-For the capped example, the finer forecasts are A = (20%, 40%, 20%, 20%) and B = (40%, 40%, 18%, 2%), with payments clipped at two units: honest reporting yields A about €2,300 in expectation, and the best misreport about €4,000. None of these examples reports a live contract, a demonstrated investment return or a current regulatory rule.
+[2] José M. Bernardo, “Expected Information as Expected Utility”, *The Annals of Statistics* 7(3), 686–690 (1979), especially pp. 688–689; Tilmann Gneiting and Adrian E. Raftery, “Strictly Proper Scoring Rules, Prediction, and Estimation”, *Journal of the American Statistical Association* 102(477), 359–378 (2007).
 
-Related reading: [All Roads Lead to Disagreement (I): Why Two Careful Analysts Can Still Disagree](https://aurelien-giroux.github.io/blog-finance/p/all-roads-lead-to-disagreement-1/) and [What Can a Market See?](https://aurelien-giroux.github.io/blog-finance/p/what-can-a-market-see/).
+[3] Yury Polyanskiy and Yihong Wu, *Information Theory*, MIT 6.441 course notes (2016), Chapters 2–3.
 
-[1] Henri Poincaré, *Science and Hypothesis*, translated by W. J. Greenstreet (Walter Scott Publishing, 1905), Chapter III, p. 50 in the edition transcribed by the Brock University Mead Project. Poincaré wrote about the geometry of physical space. The text applies his remark to geometries on the space of probability forecasts, the subject of information geometry.
+[4] N. N. Čencov, *Statistical Decision Rules and Optimal Inference* (American Mathematical Society, 1982); Hiroshi Nagaoka, “The Fisher Metric as a Metric on the Cotangent Bundle”, *Information Geometry* (2024), Theorem 7.1, DOI: 10.1007/s41884-023-00126-9.
 
-[2] José M. Bernardo, “Expected Information as Expected Utility”, *The Annals of Statistics* 7(3), 686–690 (1979), especially pp. 688–689; Tilmann Gneiting and Adrian E. Raftery, “Strictly Proper Scoring Rules, Prediction, and Estimation”, *Journal of the American Statistical Association* 102(477), 359–378 (2007). Locality means dependence on the reported law only through the probability or density assigned to the realised outcome. The finite-outcome uniqueness statement requires at least three outcomes, strict propriety and interior regularity. The proper-score/Fisher argument additionally requires a smooth convex score generator whose tangent Hessian is a fixed positive multiple of Fisher throughout the simplex interior. Propriety concerns maximising expected score; monetary risk aversion and other payoffs require separate incentive analysis.
+[5] Paul Milgrom and Nancy Stokey, “Information, Trade and Common Knowledge”, *Journal of Economic Theory* 26(1), 17–27 (1982); Jack Hirshleifer, “The Private and Social Value of Information and the Reward to Inventive Activity”, *The American Economic Review* 61(4), 561–574 (1971), especially p. 561.
 
-[3] Yury Polyanskiy and Yihong Wu, *Information Theory*, MIT 6.441 course notes (2016), Chapters 2–3: relative entropy, its chain rule, mutual information and the Donsker–Varadhan variational representation. The stake argument assumes that the two laws give probability zero to the same outcomes and that the expected logarithm is finite. For the uncapped log comparison, each party's expected own-side gain is its directional relative entropy; their sum is the Jeffreys divergence. The observation split uses the average conditional relative entropy under the first law. The signal-value statement holds under the benchmark joint law, with the comparator and payment convention fixed and no signal-dependent entry price.
+[6] Robin Hanson, “Combinatorial Information Market Design”, *Information Systems Frontiers* 5(1), 107–119 (2003); Yiling Chen, Stanko Dimitrov, Rahul Sami, Daniel M. Reeves, David M. Pennock, Robin Hanson, Lance Fortnow and Rica Gonen, “Gaming Prediction Markets: Equilibrium Strategies with a Market Maker”, *Algorithmica* 58(4), 930–969 (2010; online publication 2009).
 
-[4] N. N. Čencov, *Statistical Decision Rules and Optimal Inference* (American Mathematical Society, 1982); Hiroshi Nagaoka, “The Fisher Metric as a Metric on the Cotangent Bundle”, *Information Geometry* (2024), Theorem 7.1, DOI: 10.1007/s41884-023-00126-9. The uniqueness is for a family of metrics respecting the specified information-preserving Markov embeddings. Local Fisher geometry alone does not determine a global divergence.
+[7] David Blackwell, “Equivalent Comparisons of Experiments”, *The Annals of Mathematical Statistics* 24(2), 265–272 (1953); Henrique de Oliveira, “Blackwell's Informativeness Theorem Using Diagrams”, *Games and Economic Behavior* 109, 126–131 (2018).
 
-[5] Paul Milgrom and Nancy Stokey, “Information, Trade and Common Knowledge”, *Journal of Economic Theory* 26(1), 17–27 (1982); Jack Hirshleifer, “The Private and Social Value of Information and the Reward to Inventive Activity”, *The American Economic Review* 61(4), 561–574 (1971), especially p. 561. The no-trade theorem (Milgrom and Stokey, Theorem 1, p. 21) assumes weakly risk-averse traders; “concordant” beliefs, meaning agreement on how signals relate to the payoff-relevant state, which is weaker than a common prior; an initial allocation that is Pareto-optimal relative to prior beliefs; and common knowledge that the payoff-state-contingent trade is feasible and weakly preferred by each. Its conclusion is that every trader is indifferent to the trade; strict risk aversion makes the trade zero. Hirshleifer separates private informational advantage from social value; disagreement alone establishes neither trading demand nor welfare improvement.
+[8] Michail Anthropelos and Constantinos Kardaras, “Equilibrium in Risk-Sharing Games”, *Finance and Stochastics* 21, 815–865 (2017), especially Sections 2.3–2.6 and Theorem 2.2.
 
-[6] Robin Hanson, “Combinatorial Information Market Design”, *Information Systems Frontiers* 5(1), 107–119 (2003); Yiling Chen, Stanko Dimitrov, Rahul Sami, Daniel M. Reeves, David M. Pennock, Robin Hanson, Lance Fortnow and Rica Gonen, “Gaming Prediction Markets: Equilibrium Strategies with a Market Maker”, *Algorithmica* 58(4), 930–969 (2010; online publication 2009). Market scoring rules already use differences between scores. The proposed comparison does not claim to invent that operation; it specifies the forecasts, financial purpose, settlement and governance together.
+[9] Glenn Shafer, Alexander Shen, Nikolai Vereshchagin and Vladimir Vovk, “Test Martingales, Bayes Factors and p-Values”, *Statistical Science* 26(1), 84–101 (2011).
 
-[7] David Blackwell, “Equivalent Comparisons of Experiments”, *The Annals of Mathematical Statistics* 24(2), 265–272 (1953). The finite comparison of experiments concerns all decision problems under its conditions and uses a state-independent stochastic kernel for garbling. For a proof of the finite theorem, see Henrique de Oliveira, “Blackwell's Informativeness Theorem Using Diagrams”, *Games and Economic Behavior* 109, 126–131 (2018).
+[10] John Maynard Keynes, *A Tract on Monetary Reform* (Macmillan, 1923), Chapter III, p. 80.
 
-[8] Michail Anthropelos and Constantinos Kardaras, “Equilibrium in Risk-Sharing Games”, *Finance and Stochastics* 21, 815–865 (2017), especially Sections 2.3–2.6 and Theorem 2.2. The text uses the competitive, complete-market exponential-utility benchmark, not the paper's strategic equilibrium. The paper's geometric price measure uses endowment-adjusted beliefs. Equivalently, keeping physical beliefs separate gives a risk-tolerance-weighted geometric pool together with a state-dependent aggregate-resource factor in state prices. Initial budgets are still required for the allocation.
+[11] Shizuo Kakutani, “On Equivalence of Infinite Product Measures”, *Annals of Mathematics* 49(1), 214–224 (1948).
 
-[9] Glenn Shafer, Alexander Shen, Nikolai Vereshchagin and Vladimir Vovk, “Test Martingales, Bayes Factors and p-Values”, *Statistical Science* 26(1), 84–101 (2011), discussing Ville's inequality and non-negative evidence accounts. The threshold bound holds under the reference law for the complete, pre-registered account.
+[12] George J. Stigler, “The Theory of Economic Regulation”, *The Bell Journal of Economics and Management Science* 2(1), 3–21 (1971), p. 3.
 
-[10] John Maynard Keynes, *A Tract on Monetary Reform* (Macmillan, 1923), Chapter III, p. 80. Keynes was criticising long-run arguments in the quantity theory of money; the use here is an analogy.
+[13] C. A. E. Goodhart, “The ECB and the Conduct of Monetary Policy: Goodhart's Law and Lessons from the Euro Area”, *Journal of Common Market Studies* 44(4), 757–778 (2006), DOI: 10.1111/j.1468-5965.2006.00661.x; Donald MacKenzie, *An Engine, Not a Camera: How Financial Models Shape Markets* (MIT Press, 2006).
 
-[11] Shizuo Kakutani, “On Equivalence of Infinite Product Measures”, *Annals of Mathematics* 49(1), 214–224 (1948). For independent renewals with equivalent component laws, a positive product of Hellinger affinities, equivalently a finite sum of one minus those affinities, gives equivalence of the complete-history laws; a zero product gives singularity. The additional question of finite undiscounted expected log payments depends on the sum of the directional relative entropies, not on Kakutani's dichotomy alone. The product theorem applies to component laws specified independently of the realised history; it does not automatically extend to adaptive forecasts.
+[14] Gabriel Peyré and Marco Cuturi, *Computational Optimal Transport*, *Foundations and Trends in Machine Learning* 11(5–6), 355–607 (2019); author version arXiv:1803.00567v4, especially Section 2.6, Remark 2.30, equations (2.37)–(2.38), Section 6.1, Proposition 6.1 and equations (6.1)–(6.2), and Sections 8.1–8.2.1.
 
-[12] George J. Stigler, “The Theory of Economic Regulation”, *The Bell Journal of Economics and Management Science* 2(1), 3–21 (1971), p. 3. The quotation is an excerpt from his statement of the paper's central thesis; the capitalised opening is marked with brackets.
+[15] Jean-Marc Jancovici, “[L'énergie, de quoi s'agit-il exactement ?](https://jancovici.com/transition-energetique/l-energie-et-nous/lenergie-de-quoi-sagit-il-exactement/)”, author website, first published 1 August 2011; accessed 26 September 2026.
 
-[13] C. A. E. Goodhart, “The ECB and the Conduct of Monetary Policy: Goodhart's Law and Lessons from the Euro Area”, *Journal of Common Market Studies* 44(4), 757–778 (2006), DOI: 10.1111/j.1468-5965.2006.00661.x; Donald MacKenzie, *An Engine, Not a Camera: How Financial Models Shape Markets* (MIT Press, 2006). Goodhart's own restatement is used here for the control-pressure warning, rather than attributing a later popular paraphrase to the original 1975 paper.
-
-
-[14] Gabriel Peyré and Marco Cuturi, *Computational Optimal Transport*, *Foundations and Trends in Machine Learning* 11(5–6), 355–607 (2019); author version arXiv:1803.00567v4. Section 2.6, Remark 2.30, equations (2.37)–(2.38) gives the one-dimensional cumulative-distribution formula. Section 6.1, Proposition 6.1 and equations (6.1)–(6.2) gives the one-potential Kantorovich–Rubinstein duality used in the second box. Sections 8.1 and 8.2.1 discuss convex-generator divergences and transport comparisons.
-
-[15] Jean-Marc Jancovici, “[L'énergie, de quoi s'agit-il exactement ?](https://jancovici.com/transition-energetique/l-energie-et-nous/lenergie-de-quoi-sagit-il-exactement/)”, author website, first published 1 August 2011; accessed 26 September 2026. The cited observation concerns energy's physical role compared with its share of monetary expenditure. The contractual application is developed here, not attributed to Jancovici.
-
-[16] John Duchi, *Statistics 311 / Electrical Engineering 377: Information Theory and Statistics*, Stanford University lecture notes, Chapter 8, Sections 8.1–8.3, especially equations (8.1.1)–(8.1.2) and the Cramér–Rao discussion in Section 8.2. These support the regular-model Fisher information, negative expected log-likelihood curvature and estimation-bound statements.
+[16] John Duchi, *Statistics 311 / Electrical Engineering 377: Information Theory and Statistics*, Stanford University lecture notes, Chapter 8, Sections 8.1–8.3.
